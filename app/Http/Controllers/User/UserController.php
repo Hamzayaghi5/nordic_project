@@ -10,9 +10,9 @@ class UserController extends Controller
 {
     
 
-       public function get_users()
+       public function get_all()
     {
-       $users=user::get_users();
+       $users=user::get_all();
 
        return View('admin.user.index',compact('users'));
     }

@@ -27,8 +27,8 @@ class User extends Authenticatable
 
      public function get($id)
     {
-        $category=Category::find($id);
-        return $category
+        $user=User::find($id);
+        return $user;
     }
 
     public function run()
