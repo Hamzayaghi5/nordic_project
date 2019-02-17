@@ -16,8 +16,35 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','token',
     ];
+
+    public static function get_users()
+    {
+        $users = User::all();
+        return $users;
+    }
+
+    public function run()
+{
+    factory(App\User::class, 50)->create()->each(function ($user) {
+        $user->posts()->save(factory(App\Post::class)->make());
+    });
+}
+
+
+       public function is_admin()
+     {
+       if($this->type=='admin')
+       {
+         return true;
+       }
+       else {
+         // code...
+         return false;
+       }
+     }
+
 
     /**
      * The attributes that should be hidden for arrays.

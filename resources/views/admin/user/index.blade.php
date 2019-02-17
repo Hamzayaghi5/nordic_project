@@ -23,23 +23,28 @@
               <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                   <tr>
+                    <th>#</th>
                     <th>Name</th>
-                    <th>Position</th>
-                    <th>Office</th>
-                    <th>Age</th>
-                    <th>Start date</th>
-                    <th>Salary</th>
+                    <th>Email</th>
+                    <th>crated_at</th>
+                    <th>updated_at</th>
+                    <th>Operations</th>
+
                   </tr>
                 </thead>
                 <tbody>
+                  @foreach($users as $user)
                   <tr>
-                    <td>Tiger Nixon</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>61</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
+                    <td>{{ $user->id }}</td>
+                    <td>{{ $user->name }}</td>
+                    <td>{{ $user->email }}</td>
+                    <td>{{ $user->crated_at }}</td>
+                    <td>{{ $user->updated_at }}</td>
+                    <td><div  class="row"><a style="margin-left:5px;color:rgba(204, 0, 0, 1);;" href="/user/edit/{{$user->id}}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a><a  style="margin-left:5px;color:rgba(204, 0, 0, 1);" onclick="return confirm('Are you sure you want to delete this user')" href="/user/delete/{{$user->id}}"><i class="fa fa-times" aria-hidden="true"></i></a></div>
+                    <div>
+                    </td>
                   </tr>
+                  @endforeach
                 </tbody>
               </table>
             </div>

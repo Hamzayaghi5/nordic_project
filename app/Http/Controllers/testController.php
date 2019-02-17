@@ -16,11 +16,5 @@ class testController extends Controller
 		# code...
 	}
 
-	   public static function admin()
-    {
-       $test= new test();
-       $data=$test::admin();
-
-       return view('admin.index',$data);
-    }
+	
 }

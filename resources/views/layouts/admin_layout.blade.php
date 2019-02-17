@@ -10,7 +10,7 @@
   <meta name="author" content="">
 
   <title>SB Admin - Dashboard</title>
-
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Custom fonts for this template-->
   <link href="{{asset('admin/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
 
@@ -19,6 +19,8 @@
 
   <!-- Custom styles for this template-->
   <link href="{{ asset('admin/css/sb-admin.css') }}" rel="stylesheet">
+
+  <link href="{{ asset('admin/css/main.css') }}" rel="stylesheet">
 
 </head>
 
@@ -121,6 +123,13 @@
           <i class="fas fa-fw fa-table"></i>
           <span>Tables</span></a>
       </li>
+
+
+      <li class="nav-item">
+        <a class="nav-link" href="/admin/users">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Users</span></a>
+      </li>
     </ul>
 
      <div id="content-wrapper">
@@ -149,7 +158,7 @@
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
+          <a class="btn btn-primary" href="{{route('logout')}}">Logout</a>
         </div>
       </div>
     </div>
