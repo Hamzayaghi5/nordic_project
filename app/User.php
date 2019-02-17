@@ -19,10 +19,16 @@ class User extends Authenticatable
         'name', 'email', 'password','token',
     ];
 
-    public static function get_users()
+    public static function get_all()
     {
-        $users = User::all();
+        $users=User::all();
         return $users;
+    }
+
+     public function get($id)
+    {
+        $category=Category::find($id);
+        return $category
     }
 
     public function run()

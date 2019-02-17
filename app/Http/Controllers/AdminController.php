@@ -18,12 +18,7 @@ class AdminController extends Controller
        return view('admin.index');
     }
 
-    public function get_users()
-    {
-       $users=User::get_users();
-
-       return View('admin.user.index',compact('users'));
-    }
+ 
 
 
 }

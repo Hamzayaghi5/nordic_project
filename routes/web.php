@@ -35,14 +35,38 @@ Route::get('/admin_page', 'AdminController@admin_index')->name('admin');
 
 //*****************************************************************************************************************************************
 
-Route::get('/admin/users/index', 'AdminController@get_users')->name('admin');
+Route::get('/admin/users/index', 'UserController@get_all');
 
-Route::get('/admin/users/create', 'AdminController@get_users')->name('admin');
+Route::get('/admin/users/create', 'UserController@create');
 
-Route::get('/admin/users/update', 'AdminController@get_users')->name('admin');
+Route::get('/admin/users/update/{id}', 'UserController@edit');
 
-Route::get('/admin/users/delete', 'AdminController@get_users')->name('admin');
+Route::post('/admin/users/update/{id}', 'UserController@update');
+
+Route::get('/admin/users/delete/{id}', 'UserController@delete');
 
 //*****************************************************************************************************************************************
+
+
+Route::get('/admin/categories/index', 'CategoryController@get_all');
+
+Route::get('/admin/categories/create', 'CategoryController@create');
+
+Route::get('/admin/categories/update/{id}', 'CategoryController@edit');
+
+Route::post('/admin/categories/update/{id}', 'CategoryController@update');
+
+Route::get('/admin/categories/delete/{id}', 'CategoryController@delete');
+//*****************************************************************************************************************************************
+
+Route::get('/admin/products/index', 'ProductController@get_all');
+
+Route::get('/admin/products/create', 'ProductController@create');
+
+Route::get('/admin/products/update/{id}', 'ProductController@edit');
+
+Route::post('/admin/products/update/{id}', 'ProductController@update');
+
+Route::get('/admin/products/delete/{id}', 'ProductController@delete');
 
 });
