@@ -19,4 +19,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/admin_page', 'testController@admin')->name('admin');
+
+
+
+Route::group(['middleware' => 'checkval'], function() {
+	Route::get('/admin_page', 'testController@admin')->name('admin');
+});
