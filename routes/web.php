@@ -23,8 +23,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 
-
-	Route::get('/logout', 'Auth\LoginController@logout')->name('admin');
+Route::get('/logout', 'Auth\LoginController@logout')->name('admin');
 
 
 Route::post('/login', 'Auth\LoginController@login')->name('admin');
