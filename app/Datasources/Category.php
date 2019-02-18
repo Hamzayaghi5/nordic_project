@@ -25,10 +25,11 @@ class Category extends Model
     public static function category_insert($name,$image)
     {
 
-        
+
     	$category=new Category();
     	$category->name=$name;
         $category->image=$image;
+        $category->save();
     	return $category;
     }
     public static function category_update($id,$name,$image)
