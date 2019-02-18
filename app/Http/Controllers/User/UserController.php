@@ -10,7 +10,7 @@ class UserController extends Controller
 {
     
 
-       public function get_all()
+       public function index()
     {
        $users=user::get_all();
 

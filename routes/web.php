@@ -35,7 +35,7 @@ Route::get('/admin_page', 'AdminController@admin_index')->name('admin');
 
 //*****************************************************************************************************************************************
 
-Route::get('/admin/users/index', 'UserController@get_all');
+Route::get('/admin/users/index', 'UserController@index');
 
 Route::get('/admin/users/create', 'UserController@create');
 
@@ -48,7 +48,7 @@ Route::get('/admin/users/delete/{id}', 'UserController@delete');
 //*****************************************************************************************************************************************
 
 
-Route::get('/admin/categories/index', 'CategoryController@get_all');
+Route::get('/admin/categories/index', 'CategoryController@index');
 
 Route::get('/admin/categories/create', 'CategoryController@create');
 
@@ -59,7 +59,7 @@ Route::post('/admin/categories/update/{id}', 'CategoryController@update');
 Route::get('/admin/categories/delete/{id}', 'CategoryController@delete');
 //*****************************************************************************************************************************************
 
-Route::get('/admin/products/index', 'ProductController@get_all');
+Route::get('/admin/products/index', 'ProductController@index');
 
 Route::get('/admin/products/create', 'ProductController@create');
 
