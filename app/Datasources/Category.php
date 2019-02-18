@@ -10,26 +10,28 @@ class Category extends Model
         'name','image'
     ];
 
-    public function get_all()
+    public static function get_all()
     {
     	$categories=Category::all();
-    	return $categories
+    	return $categories;
     }
 
-     public function get($id)
+     public static function get($id)
     {
     	$category=Category::find($id);
-    	return $category
+    	return $category;
     }
 
-    public function insert($name,$image)
+    public static function category_insert($name,$image)
     {
+
+        
     	$category=new Category();
     	$category->name=$name;
         $category->image=$image;
     	return $category;
     }
-    public function update($id,$name,$image)
+    public static function category_update($id,$name,$image)
     {
     	$category=Category::find($id);
     	$category->name=$name;
@@ -38,7 +40,7 @@ class Category extends Model
     	return $category;
     }
 
-    public function delete($id)
+    public static function category_delete($id)
     {
     	$category=Category::find($id);
     	$category->delete();

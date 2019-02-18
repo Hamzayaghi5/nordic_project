@@ -3,6 +3,8 @@
     @section('content')
     <div id="content-wrapper">
 
+      <a style="margin:1%" href="/admin/users/create" class="btn btn-success"><i style="color: white" class="fa fa-plus" aria-hidden="true"></i> Add New User</a>
+
       <div class="container-fluid">
 
         <!-- Breadcrumbs-->
@@ -40,7 +42,7 @@
                     <td>{{ $user->email }}</td>
                     <td>{{ $user->crated_at }}</td>
                     <td>{{ $user->updated_at }}</td>
-                    <td><div  class="row"><a style="margin-left:5px;color:rgba(204, 0, 0, 1);;" href="/user/edit/{{$user->id}}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a><a  style="margin-left:5px;color:rgba(204, 0, 0, 1);" onclick="return confirm('Are you sure you want to delete this user')" href="/user/delete/{{$user->id}}"><i class="fa fa-times" aria-hidden="true"></i></a></div>
+                    <td><div  class="row"><a style="margin-left:5px;color:rgba(204, 0, 0, 1);;" href="/admin/user/edit/{{$user->id}}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a><a  style="margin-left:5px;color:rgba(204, 0, 0, 1);" onclick="return confirm('Are you sure you want to delete this user')" href="/admin/users/delete/{{$user->id}}"><i class="fa fa-times" aria-hidden="true"></i></a></div>
                     <div>
                     </td>
                   </tr>

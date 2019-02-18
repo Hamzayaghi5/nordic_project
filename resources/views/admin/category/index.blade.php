@@ -2,8 +2,10 @@
 
     @section('content')
     <div id="content-wrapper">
-
-      <a style="margin:1%" href="/admin/products/create" class="btn btn-success"><i style="color: white" class="fa fa-plus" aria-hidden="true"></i> Add New Product</a>
+      
+      <a style="margin:1%" href="/admin/categories/create" class="btn btn-success"><i style="color: white" class="fa fa-plus" aria-hidden="true"></i> Add New Category</a>  
+      
+      
 
       <div class="container-fluid">
 
@@ -26,22 +28,18 @@
                 <thead>
                   <tr>
                     <th>#</th>
-                    <th>title</th>
-                    <th>description</th>
-                    <th>image</th>
-                    <th>created_at</th>
+                    <th>Name</th>
+                    <th>Category Image</th>
 
                   </tr>
                 </thead>
                 <tbody>
-                  @foreach($products as $product)
+                  @foreach($categories as $category)
                   <tr>
-                    <td>{{ $product->id }}</td>
-                    <td>{{ $product->title }}</td>
-                    <td>{{ $product->description }}</td>
-                    <td>{{ $product->image }}</td>
-                    <td>{{ $product->created_at }}</td>
-                    <td><div  class="row"><a style="margin-left:5px;color:rgba(204, 0, 0, 1);;" href="/admin/products/edit/{{$product->id}}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a><a  style="margin-left:5px;color:rgba(204, 0, 0, 1);" onclick="return confirm('Are you sure you want to delete this product')" href="/admin/products/delete/{{$product->id}}"><i class="fa fa-times" aria-hidden="true"></i></a></div>
+                    <td>{{$category->id }}</td>
+                    <td>{{$category->name }}</td>
+                    <td>{{$category->image }}</td>
+                    <td><div  class="row"><a style="margin-left:5px;color:rgba(204, 0, 0, 1);;" href="/admin/categories/edit/{{$category->id}}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a><a  style="margin-left:5px;color:rgba(204, 0, 0, 1);" onclick="return confirm('Are you sure you want to delete this category')" href="/admin/categories/delete/{{$category->id}}"><i class="fa fa-times" aria-hidden="true"></i></a></div>
                     <div>
                     </td>
                   </tr>

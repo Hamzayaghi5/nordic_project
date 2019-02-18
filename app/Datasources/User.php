@@ -25,7 +25,7 @@ class User extends Authenticatable
         return $users;
     }
 
-     public function get($id)
+     public static function get($id)
     {
         $user=User::find($id);
         return $user;
