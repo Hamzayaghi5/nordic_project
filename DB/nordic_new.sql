@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.23)
 # Database: nordic
-# Generation Time: 2019-02-17 23:50:12 +0000
+# Generation Time: 2019-02-18 00:10:40 +0000
 # ************************************************************
 
 
@@ -28,6 +28,7 @@ DROP TABLE IF EXISTS `categories`;
 CREATE TABLE `categories` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` text COLLATE utf8mb4_unicode_ci,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -117,7 +118,7 @@ LOCK TABLES `users` WRITE;
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `type`, `remember_token`, `created_at`, `updated_at`)
 VALUES
-	(1,'admin','admin@admin.com',NULL,'$2y$10$MVOlCsbfs/TgtxPP/L2d/OMlHDffqz0xnCytn1N.x3ycZXzNM4hVm','admin','Tp4VnAYbnPI9DdpoFp5bmXMokwh7qEYTRZC1Q3cWopf2CxrUl2XAS0MSkN2C','2019-02-17 18:22:20','2019-02-17 18:22:20'),
+	(1,'admin','admin@admin.com',NULL,'$2y$10$MVOlCsbfs/TgtxPP/L2d/OMlHDffqz0xnCytn1N.x3ycZXzNM4hVm','admin','cG6n96YZoocSPAifB5esXfyESwYWhQT3s1JEMVlWycQ9jy4K2iSPx5DmqTJA','2019-02-17 18:22:20','2019-02-17 18:22:20'),
 	(2,'Travis Brown','tprohaska@example.com','2019-02-17 19:37:28','$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm','user','XeXQpy3npi','2019-02-17 19:37:28','2019-02-17 19:37:28'),
 	(3,'Pattie Breitenberg','goldner.alan@example.net','2019-02-17 19:37:28','$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm','user','b5VXKvcxEw','2019-02-17 19:37:28','2019-02-17 19:37:28'),
 	(4,'Easter Bergstrom','nienow.zelda@example.com','2019-02-17 19:37:28','$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm','user','xQ7sErD2zu','2019-02-17 19:37:28','2019-02-17 19:37:28'),
