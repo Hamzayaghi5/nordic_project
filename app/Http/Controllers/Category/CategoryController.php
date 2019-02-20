@@ -38,25 +38,22 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {   
-        $data=$request->all();
-        $name=$data['name'];
-        $image=$data['img'];
-        if($request->file('img')!= null){
+             $data=$request->all();
+      if($request->file('img')!= null){
+
             $path;
-                
-                    if(request()->file('img')->isValid()){
-                               
-                $image = $request->file('img')->storeAs('public', time().'.jpg');
+            if(request()->file('img')->isValid()){
+                $path = $request->file('img')->storeAs('public', time().'.jpg');
                 $img_name=str_replace('public/', '', $path);
                 if(empty($path)){
                     return response()->json([],400);
                 }
 
             }
-            dd($data);
-        category::insert($name,$img_name);
-        return redirect('/admin/categories/index');
-        }
+        category::category_insert($data['name'],$img_name);
+         return redirect('/admin/categories/index');
+    }
+    return response()->json([],400);
 
     }
 
@@ -79,9 +76,11 @@ class CategoryController extends Controller
      * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function edit(Category $category)
+    public function edit(Category $category,$id)
     {
-        //
+        $category=Category::find($id);
+        return view('admin.category.update',compact('category'));
+    
     }
 
     /**

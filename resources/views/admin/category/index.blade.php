@@ -38,8 +38,8 @@
                   <tr>
                     <td>{{$category->id }}</td>
                     <td>{{$category->name }}</td>
-                    <td>{{$category->image }}</td>
-                    <td><div  class="row"><a style="margin-left:5px;color:rgba(204, 0, 0, 1);;" href="/admin/categories/edit/{{$category->id}}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a><a  style="margin-left:5px;color:rgba(204, 0, 0, 1);" onclick="return confirm('Are you sure you want to delete this category')" href="/admin/categories/delete/{{$category->id}}"><i class="fa fa-times" aria-hidden="true"></i></a></div>
+                    <td><img class="img-responsive col-xs-12 col-sm-3" src="{{env('image_storage') }}/{{$category->image}}"></td>
+                    <td><div  class="row"><a style="margin-left:5px;color:rgba(204, 0, 0, 1);;" href="/admin/categories/update/{{$category->id}}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a><a  style="margin-left:5px;color:rgba(204, 0, 0, 1);" onclick="return confirm('Are you sure you want to delete this category')" href="/admin/categories/delete/{{$category->id}}"><i class="fa fa-times" aria-hidden="true"></i></a></div>
                     <div>
                     </td>
                   </tr>
