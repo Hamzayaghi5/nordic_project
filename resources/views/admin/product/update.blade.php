@@ -32,7 +32,7 @@
 	<label for="exampleInputEmail1">Image</label>
 	<input class="active" type="file" name="img_name" enctype="multipart/form-data">
 	<br><br>
-	<button  type="submit" class="btn btn-success"><i style="color: white" class="fa fa-plus" aria-hidden="true"></i> Edit Agent</button>
+	<button  type="submit" class="btn btn-primary"><i style="color: white" class="fa fa-plus" aria-hidden="true"></i> Update Agent</button>
 </form>
 	</div>
 @endsection

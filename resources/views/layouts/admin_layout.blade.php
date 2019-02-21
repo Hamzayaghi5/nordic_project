@@ -134,8 +134,14 @@
 
        <li class="nav-item">
         <a class="nav-link" href="/admin/categories/index">
-          <i class="fas fa-fw fa-table"></i>
+          <i class="fas fa-fw fa-building"></i>
           <span>Categories</span></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="/admin/products/index">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Products</span></a>
       </li>
     </ul>
 

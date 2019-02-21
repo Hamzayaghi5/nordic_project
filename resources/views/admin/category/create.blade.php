@@ -13,7 +13,7 @@
 	<label for="exampleInputEmail1">Image</label>
 	<input class="active" type="file" name="img" enctype="multipart/form-data" required>
 	<br><br>
-	<button  type="submit" class="btn btn-success"><i style="color: white" class="fa fa-plus" aria-hidden="true"></i> Add Agent</button>
+	<button  type="submit" class="btn btn-success"><i style="color: white" class="fa fa-plus" aria-hidden="true"></i> Create Category</button>
 </form>
 	</div>
 @endsection
