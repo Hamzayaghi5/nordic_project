@@ -78,7 +78,7 @@ class CategoryController extends Controller
      */
     public function edit(Category $category,$id)
     {
-        $category=Category::find($id);
+        $category=Category::get($id);
         return view('admin.category.update',compact('category'));
     
     }
@@ -90,10 +90,29 @@ class CategoryController extends Controller
      * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Category $category)
-    {
-        //
+    public function update(Request $request)
+    {   
+        $id=$request['id'];
+             $data=$request->all();
+      if($request->file('img')!= null){
+
+            $path;
+            if(request()->file('img')->isValid()){
+                $path = $request->file('img')->storeAs('public', time().'.jpg');
+                $img_name=str_replace('public/', '', $path);
+                if(empty($path)){
+                    return response()->json([],400);
+                }
+
+            }
+
     }
+
+        category::category_update($id,$data['name'],$img_name);
+         return redirect('/admin/categories/index');
+
+    }
+
 
     /**
      * Remove the specified resource from storage.

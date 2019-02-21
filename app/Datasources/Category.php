@@ -10,6 +10,11 @@ class Category extends Model
         'name','image'
     ];
 
+    public function products()
+    {
+        return $this->HasMany('App\Product');
+    }
+
     public static function get_all()
     {
     	$categories=Category::all();
@@ -34,10 +39,22 @@ class Category extends Model
     }
     public static function category_update($id,$name,$image)
     {
-    	$category=Category::find($id);
-    	$category->name=$name;
+
+        
+        if ($image!=null) {
+            $category=Category::find($id);
+        $category->name=$name;
         $category->image=$image;
-    	$category->save();
+        $category->save();
+        }
+        else
+        {
+        $category=Category::find($id);
+        $category->name=$name;
+        $category->image=$category->image;
+        $category->save();
+        }
+
     	return $category;
     }
 

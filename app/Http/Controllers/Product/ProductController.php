@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Product;
 use Illuminate\Http\Request;
-
+use App\Category;
 class ProductController extends Controller
 {
     /**
@@ -14,7 +14,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        $products=Product::get_all();
+        return view('admin.product.index',compact('products'));
     }
 
     /**
@@ -24,7 +25,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        $categories=category::get_all();
+        return view('admin.product.create',compact('categories'));
     }
 
     /**
@@ -33,9 +35,29 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
+  public function store(Request $request)
+    {   
+             $data=$request->all();
+                    $category_id=$data['category_id'];
+        $title=$data['title'];
+        $description=$data['description'];
+ 
+      if($request->file('img_name')!= null){
+
+            $path;
+            if(request()->file('img_name')->isValid()){
+                $path = $request->file('img_name')->storeAs('public', time().'.jpg');
+                $img_name=str_replace('public/', '', $path);
+                if(empty($path)){
+                    return response()->json([],400);
+                }
+
+            }
+        Product::product_insert($category_id,$title,$description,$img_name);
+         return redirect('/admin/products/index');
+    }
+    return response()->json([],400);
+
     }
 
     /**
@@ -55,9 +77,11 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $product)
+    public function edit($id,Product $product)
     {
-        //
+        $categories=Category::get_all();
+        $product=Product::get($id);
+        return view('admin.product.update',compact('product','categories'));
     }
 
     /**
@@ -67,9 +91,29 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
-    {
-        //
+    public function update(Request $request)
+    {   
+             $data=$request->all();
+        $category_id=$request['category_id'];
+        $title=$request['title'];
+        $description=$request['description'];
+ 
+      if($request->file('img_name')!= null){
+
+            $path;
+            if(request()->file('img_name')->isValid()){
+                $path = $request->file('img_name')->storeAs('public', time().'.jpg');
+                $img_name=str_replace('public/', '', $path);
+                if(empty($path)){
+                    return response()->json([],400);
+                }
+
+            }
+        Product::product_update($category_id,$title,$description,$img_name);
+         return redirect('/admin/products/index');
+    }
+    return response()->json([],400);
+
     }
 
     /**
