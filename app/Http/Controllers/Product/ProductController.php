@@ -94,6 +94,7 @@ class ProductController extends Controller
     public function update(Request $request)
     {   
              $data=$request->all();
+             $id=$request['id'];
         $category_id=$request['category_id'];
         $title=$request['title'];
         $description=$request['description'];
@@ -109,10 +110,16 @@ class ProductController extends Controller
                 }
 
             }
-        Product::product_update($category_id,$title,$description,$img_name);
-         return redirect('/admin/products/index');
+     Product::product_update($id,$category_id,$title,$description,$img_name);
     }
-    return response()->json([],400);
+    else
+    {
+        $product=Product::get($id);
+        Product::product_update($id,$category_id,$title,$description,$product->image);
+    }
+
+       
+         return redirect('/admin/products/index');
 
     }
 

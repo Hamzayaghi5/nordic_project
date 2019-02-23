@@ -94,6 +94,7 @@ class CategoryController extends Controller
     {   
         $id=$request['id'];
              $data=$request->all();
+             if($request->file('img')!= null){
 
             $path;
             if(request()->file('img')->isValid()){
@@ -107,8 +108,15 @@ class CategoryController extends Controller
 
 
         category::category_update($id,$data['name'],$img_name);
-         return redirect('/admin/categories/index');
+    }
+    else
+    {
+        $category=Category::get($id);
 
+        category::category_update($id,$data['name'],$category->image);
+    }
+
+         return redirect('/admin/categories/index');
     }
 
 
