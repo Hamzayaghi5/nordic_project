@@ -44,7 +44,9 @@
                        <td><img class="img-responsive col-lg-6" src="{{env('image_storage') }}/{{$product->image}}"></td>
                     <td>{{$product->category->name }}</td>
                     <td>{{$product->created_at }}</td>
-                    <td><div  class="row"><a style="margin-left:5px;color:rgba(204, 0, 0, 1);;" href="/admin/products/update/{{$product->id}}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a><a  style="margin-left:5px;color:rgba(204, 0, 0, 1);" onclick="return confirm('Are you sure you want to delete this product')" href="/admin/products/delete/{{$product->id}}"><i class="fa fa-times" aria-hidden="true"></i></a></div>
+                    <td><div class="container">
+                      <div  class="row"><a style="margin-left:1%" href="/admin/products/edit/{{$product->id}}"><button class="btn btn-primary" aria-hidden="true">Edit</button></a><a  style="margin-left:1%;color:rgba(204, 0, 0, 1);" onclick="return confirm('Are you sure you want to delete this product')" href="/admin/products/delete/{{$product->id}}"><button class="btn btn-danger" aria-hidden="true">Delete</button></a></div>
+                      </div>
                     <div>
                     </td>
                   </tr>

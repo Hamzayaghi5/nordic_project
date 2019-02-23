@@ -42,8 +42,11 @@
                     <td>{{ $user->email }}</td>
                     <td>{{ $user->crated_at }}</td>
                     <td>{{ $user->updated_at }}</td>
-                    <td><div  class="row"><a style="margin-left:5px;color:rgba(204, 0, 0, 1);;" href="/admin/user/edit/{{$user->id}}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a><a  style="margin-left:5px;color:rgba(204, 0, 0, 1);" onclick="return confirm('Are you sure you want to delete this user')" href="/admin/users/delete/{{$user->id}}"><i class="fa fa-times" aria-hidden="true"></i></a></div>
-                    <div>
+
+                    <td>
+                      <div class="container">
+                      <div  class="row"><a style="margin-left:1%" href="/admin/user/edit/{{$user->id}}"><button class="btn btn-primary" aria-hidden="true">Edit</button></a><a  style="margin-left:1%;color:rgba(204, 0, 0, 1);" onclick="return confirm('Are you sure you want to delete this user')" href="/admin/users/delete/{{$user->id}}"><button class="btn btn-danger" aria-hidden="true">Delete</button></a></div>
+                      </div>
                     </td>
                   </tr>
                   @endforeach
