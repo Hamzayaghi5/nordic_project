@@ -42,23 +42,12 @@ class Product extends Model
          public static function product_update($id,$category_id,$title,$description,$image)
     {
 
-        if ($image!=null) {
-              $product = Product::find($id);
-        $product->category_id=$category_id;
-        $product->title=$title;
-        $product->description=$description;
-        $product->image=$image;
-        $product->save();
-        }
-        else
-
-        {   $product = Product::find($id);
+         $product = Product::find($id);
             $product->category_id=$category_id;
             $product->title=$title;
             $product->description=$description;
             $product->image=$product->image;
             $product->save();
-        }
         return $product;
     }
 

@@ -40,20 +40,11 @@ class Category extends Model
     public static function category_update($id,$name,$image)
     {
 
-        
-        if ($image!=null) {
-            $category=Category::find($id);
-        $category->name=$name;
-        $category->image=$image;
-        $category->save();
-        }
-        else
-        {
+    
         $category=Category::find($id);
         $category->name=$name;
         $category->image=$category->image;
         $category->save();
-        }
 
     	return $category;
     }
