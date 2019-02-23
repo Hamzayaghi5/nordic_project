@@ -62,7 +62,7 @@ class Product extends Model
         return $product;
     }
 
-      public function product_delete($id)
+      public static function product_delete($id)
     {
     	$product=Product::find($id);
     	$product->delete();

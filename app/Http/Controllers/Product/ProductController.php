@@ -133,4 +133,11 @@ class ProductController extends Controller
     {
         //
     }
+
+        public function delete(Request $request)
+    {
+        $id=$request['id'];
+        Product::product_delete($id);
+        return redirect('/admin/products/index');
+    }
 }

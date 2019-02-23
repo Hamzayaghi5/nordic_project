@@ -130,4 +130,11 @@ class CategoryController extends Controller
     {
         //
     }
+
+    public function delete(Request $request)
+    {
+        $id=$request['id'];
+        Category::category_delete($id);
+        return redirect('/admin/categories/index');
+    }
 }
