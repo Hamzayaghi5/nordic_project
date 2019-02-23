@@ -40,7 +40,7 @@
                     <td>{{$category->id }}</td>
                     <td>{{$category->name }}</td>
                     <td><img class="img-responsive col-xs-12 col-sm-3" src="{{env('image_storage') }}/{{$category->image}}"></td>
-                    <td><div class="container">
+                    <td style="width: 17%;"><div class="container">
                       <div  class="row"><a style="margin-left:1%" href="/admin/categories/edit/{{$category->id}}"><button class="btn btn-primary" aria-hidden="true">Edit</button></a><a  style="margin-left:1%;color:rgba(204, 0, 0, 1);" onclick="return confirm('Are you sure you want to delete this category')" href="/admin/categories/delete/{{$category->id}}"><button class="btn btn-danger" aria-hidden="true">Delete</button></a></div>
                       </div>
                     <div>
