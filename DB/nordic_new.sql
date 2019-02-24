@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.23)
 # Database: nordic
-# Generation Time: 2019-02-18 00:14:28 +0000
+# Generation Time: 2019-02-24 14:54:50 +0000
 # ************************************************************
 
 
@@ -34,6 +34,16 @@ CREATE TABLE `categories` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+LOCK TABLES `categories` WRITE;
+/*!40000 ALTER TABLE `categories` DISABLE KEYS */;
+
+INSERT INTO `categories` (`id`, `name`, `image`, `created_at`, `updated_at`)
+VALUES
+	(1,'hamza12334','1550907783.jpg','2019-02-18 07:10:00','2019-02-23 08:14:29'),
+	(2,'fareed','1550473800.jpg','2019-02-18 07:10:00','2019-02-18 07:10:00');
+
+/*!40000 ALTER TABLE `categories` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # Dump of table migrations
@@ -92,6 +102,30 @@ CREATE TABLE `products` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+LOCK TABLES `products` WRITE;
+/*!40000 ALTER TABLE `products` DISABLE KEYS */;
+
+INSERT INTO `products` (`id`, `category_id`, `title`, `description`, `image`, `created_at`, `updated_at`)
+VALUES
+	(1,1,'mdf closet123','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation','1550473800.jpg','2019-02-18 07:10:00','2019-02-23 07:53:14');
+
+/*!40000 ALTER TABLE `products` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table slider
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `slider`;
+
+CREATE TABLE `slider` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `main_title` int(11) DEFAULT NULL,
+  `sub_title` int(11) DEFAULT NULL,
+  `img_url` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 
 
 # Dump of table users
@@ -118,7 +152,7 @@ LOCK TABLES `users` WRITE;
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `type`, `remember_token`, `created_at`, `updated_at`)
 VALUES
-	(1,'admin','admin@admin.com',NULL,'$2y$10$MVOlCsbfs/TgtxPP/L2d/OMlHDffqz0xnCytn1N.x3ycZXzNM4hVm','admin','cG6n96YZoocSPAifB5esXfyESwYWhQT3s1JEMVlWycQ9jy4K2iSPx5DmqTJA','2019-02-17 18:22:20','2019-02-17 18:22:20'),
+	(1,'admin','admin@admin.com',NULL,'$2y$10$MVOlCsbfs/TgtxPP/L2d/OMlHDffqz0xnCytn1N.x3ycZXzNM4hVm','admin','8UhlxsfVzSs9tTiDxzIyFX2UHENsATQeRtOKN50ZFgkW3EpY5Qpn6qlRgMsi','2019-02-17 18:22:20','2019-02-17 18:22:20'),
 	(2,'Travis Brown','tprohaska@example.com','2019-02-17 19:37:28','$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm','user','XeXQpy3npi','2019-02-17 19:37:28','2019-02-17 19:37:28'),
 	(3,'Pattie Breitenberg','goldner.alan@example.net','2019-02-17 19:37:28','$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm','user','b5VXKvcxEw','2019-02-17 19:37:28','2019-02-17 19:37:28'),
 	(4,'Easter Bergstrom','nienow.zelda@example.com','2019-02-17 19:37:28','$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm','user','xQ7sErD2zu','2019-02-17 19:37:28','2019-02-17 19:37:28'),
