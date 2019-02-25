@@ -17,8 +17,14 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/about',function(){
+return view('main_site.about');
+});
 
 
+Route::get('/contact',function(){
+return view('main_site.contact');
+});
 
 Route::get('/logout', 'Auth\LoginController@logout')->name('admin');
 
