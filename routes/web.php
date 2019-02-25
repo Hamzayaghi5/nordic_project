@@ -26,6 +26,11 @@ Route::get('/contact',function(){
 return view('main_site.contact');
 });
 
+
+Route::get('/services',function(){
+return view('main_site.services');
+});
+
 Route::get('/logout', 'Auth\LoginController@logout')->name('admin');
 
 

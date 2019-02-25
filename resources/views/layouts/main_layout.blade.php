@@ -68,13 +68,13 @@
                         </a>
                             </li>
                             <li class="nav-item cool active">
-                                <a class="nav-link" href="about.html">About</a>
+                                <a class="nav-link" href="/about">About</a>
                             </li>
                             <li class="nav-item cool">
-                                <a class="nav-link" href="services.html">Services</a>
+                                <a class="nav-link" href="/services">Services</a>
                             </li>
                             <li class="nav-item cool">
-                                <a class="nav-link" href="gallery.html">Gallery</a>
+                                <a class="nav-link" href="/gallery">Gallery</a>
                             </li>
                             <li class="nav-item dropdown cool">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -123,7 +123,7 @@
         <div class="bs-slider-overlay-inner">
         </div>
     </section>
-    
+
     <ol class="breadcrumb">
         <li class="breadcrumb-item">
             <a href="index.html">Home</a>
@@ -439,6 +439,15 @@
 
     <!-- /js -->
     <script src="js/bootstrap.js"></script>
+
+
+    <script type="text/javascript">
+        
+        $('.navbar-nav').on('click', 'li', function() {
+    $('.navbar-nav li.active').removeClass('active');
+    $(this).addClass('active');
+});
+    </script>
     <!-- //js -->
 </body>
 
