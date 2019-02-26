@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.23)
 # Database: nordic
-# Generation Time: 2019-02-24 14:54:50 +0000
+# Generation Time: 2019-02-26 09:49:18 +0000
 # ************************************************************
 
 
@@ -113,19 +113,33 @@ VALUES
 UNLOCK TABLES;
 
 
-# Dump of table slider
+# Dump of table sliders
 # ------------------------------------------------------------
 
-DROP TABLE IF EXISTS `slider`;
+DROP TABLE IF EXISTS `sliders`;
 
-CREATE TABLE `slider` (
+CREATE TABLE `sliders` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `main_title` int(11) DEFAULT NULL,
-  `sub_title` int(11) DEFAULT NULL,
-  `img_url` int(11) DEFAULT NULL,
+  `main_title` varchar(500) DEFAULT NULL,
+  `sub_title` varchar(500) DEFAULT NULL,
+  `img_url` text,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+LOCK TABLES `sliders` WRITE;
+/*!40000 ALTER TABLE `sliders` DISABLE KEYS */;
+
+INSERT INTO `sliders` (`id`, `main_title`, `sub_title`, `img_url`, `created_at`, `updated_at`)
+VALUES
+	(2,'Inspiring livings','Measuring dreams for building future','1551174091.jpg','2019-02-26 09:41:31','2019-02-26 09:41:31'),
+	(3,'Interior Services','Bringing Creative interiors into life','1551174130.jpg','2019-02-26 09:42:10','2019-02-26 09:42:10'),
+	(4,'Interior Services','Bringing Creative interiors into life','1551174177.jpg','2019-02-26 09:42:57','2019-02-26 09:42:57'),
+	(5,'Inspiring livings','Measuring dreams for building future','1551174209.jpg','2019-02-26 09:43:29','2019-02-26 09:43:29');
+
+/*!40000 ALTER TABLE `sliders` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # Dump of table users
@@ -152,7 +166,7 @@ LOCK TABLES `users` WRITE;
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `type`, `remember_token`, `created_at`, `updated_at`)
 VALUES
-	(1,'admin','admin@admin.com',NULL,'$2y$10$MVOlCsbfs/TgtxPP/L2d/OMlHDffqz0xnCytn1N.x3ycZXzNM4hVm','admin','8UhlxsfVzSs9tTiDxzIyFX2UHENsATQeRtOKN50ZFgkW3EpY5Qpn6qlRgMsi','2019-02-17 18:22:20','2019-02-17 18:22:20'),
+	(1,'admin','admin@admin.com',NULL,'$2y$10$MVOlCsbfs/TgtxPP/L2d/OMlHDffqz0xnCytn1N.x3ycZXzNM4hVm','admin','bYUPcH7PsDTHx0f8uuYfpmkZxMFIh5vpJnNslBQCC13vPECyVEfjrqVFw9DI','2019-02-17 18:22:20','2019-02-17 18:22:20'),
 	(2,'Travis Brown','tprohaska@example.com','2019-02-17 19:37:28','$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm','user','XeXQpy3npi','2019-02-17 19:37:28','2019-02-17 19:37:28'),
 	(3,'Pattie Breitenberg','goldner.alan@example.net','2019-02-17 19:37:28','$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm','user','b5VXKvcxEw','2019-02-17 19:37:28','2019-02-17 19:37:28'),
 	(4,'Easter Bergstrom','nienow.zelda@example.com','2019-02-17 19:37:28','$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm','user','xQ7sErD2zu','2019-02-17 19:37:28','2019-02-17 19:37:28'),
