@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Category;
+use App\Product;
+use App\Slider;
 
 class SiteController extends Controller
 {
@@ -14,6 +17,24 @@ class SiteController extends Controller
     public function index()
     {
         return view('main_site.index');
+    }
+
+
+    public function about()
+    {
+        return view('main_site.about');
+    }
+
+
+    public function contact()
+    {
+      return view('main_site.contact');
+    }
+
+
+    public function services()
+    {
+     return view('main_site.services');
     }
 
     /**

@@ -15,7 +15,8 @@ class CheckVal
      */
    public function handle($request, Closure $next)
     {
-        if(Auth::check())
+        if (Auth::check()) 
+        if(Auth::user()->type=='admin')
         return $next($request);
 
     return redirect('/login');

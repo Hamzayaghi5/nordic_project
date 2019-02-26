@@ -15,33 +15,30 @@ Route::get('/', 'SiteController@index')->name('index');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/about',function(){
-return view('main_site.about');
-});
 
 
-Route::get('/contact',function(){
-return view('main_site.contact');
-});
+
+Route::get('/about', 'SiteController@about')->name('about');
+
+Route::get('/contact', 'SiteController@contact')->name('contact');
+
+Route::get('/services', 'SiteController@services')->name('services');
+
+Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 
 
-Route::get('/services',function(){
-return view('main_site.services');
-});
+Route::post('/login', 'Auth\LoginController@login')->name('login');
 
-Route::get('/logout', 'Auth\LoginController@logout')->name('admin');
-
-
-Route::post('/login', 'Auth\LoginController@login')->name('admin');
-Route::group(['middleware' => 'checkval'], function() {
 //*****************************************************************************************************************************************
+//protected routes by the middleware
+Route::group(['middleware' => 'checkval'], function() {
 
 Route::get('admin_page', 'AdminController@admin_index')->name('admin');
 
 
 //*****************************************************************************************************************************************
+
+
 
 Route::get('admin/users/index', 'UserController@index');
 
