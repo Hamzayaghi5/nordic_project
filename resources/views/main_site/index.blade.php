@@ -121,29 +121,18 @@
         <!-- //header -->
         <div class="callbacks_container">
             <ul class="rslides" id="slider3">
+
+          @foreach ($sliders as $slider)
+                {{-- expr --}}
+           
                 <li>
-                    <div class="slider-info bg1">
+                    <div style="background: url({{env('image_storage') }}/{{$slider->img_url}})no-repeat center;" class="slider-info bg">
                         <div class="bs-slider-overlay">
                             <div class="banner-text-w3layouts container">
-                                <h5 class="tag text-left mb-3">Interior Services</h5>
-                                <h4 class="movetxt text-left agile-title text-uppercase">Bringing Creative interiors into life </h4>
+                                <h5 class="tag text-left mb-3">{{$slider->main_title}}</h5>
+                                <h4 class="movetxt text-left agile-title text-uppercase">{{$slider->sub_title}}</h4>
                                 <!--/sub-content-->
                                 <div class="top-content-info">
-                                    <div class="top-content-left">
-                                        <div class="top-gd">
-                                            <h6>1300</h6>
-                                            <p>Interiror Designs</p>
-                                        </div>
-                                        <div class="top-gd">
-                                            <h6>800</h6>
-                                            <p>In Process</p>
-                                        </div>
-                                        <div class="top-gd">
-                                            <h6>900</h6>
-                                            <p>New Ideas</p>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                    </div>
                                     <div class="top-content-right">
                                         <div class="thim-click-to-bottom">
                                             <div class="rotate">
@@ -162,126 +151,7 @@
                     </div>
 
                 </li>
-                <li>
-                    <div class="slider-info bg2">
-                        <div class="bs-slider-overlay">
-                            <div class="banner-text-w3layouts container">
-                                <h5 class="tag text-left mb-3">Inspiring livings </h5>
-                                <h4 class="movetxt text-left agile-title text-uppercase">Measuring dreams for building future</h4>
-                                <!--/sub-content-->
-                                <div class="top-content-info">
-                                    <div class="top-content-left">
-                                        <div class="top-gd">
-                                            <h6>1800</h6>
-                                            <p>Minimal Designs</p>
-                                        </div>
-                                        <div class="top-gd">
-                                            <h6>600</h6>
-                                            <p>In Process</p>
-                                        </div>
-                                        <div class="top-gd">
-                                            <h6>900</h6>
-                                            <p>New Ideas</p>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                    <div class="top-content-right">
-                                        <div class="thim-click-to-bottom">
-                                            <div class="rotate">
-                                                <a href="#about" class="scroll">
-                                                   <i class="fas fa-angle-double-down"></i>
-                                                   Scroll
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <!--//sub-content-->
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="slider-info bg3">
-                        <div class="bs-slider-overlay">
-                            <div class="banner-text-w3layouts container">
-                                <h5 class="tag text-left mb-3 ">Interior Services </h5>
-                                <h4 class="movetxt text-left agile-title text-uppercase">Bringing Creative interiors into life</h4>
-                                <!--/sub-content-->
-                                <div class="top-content-info">
-                                    <div class="top-content-left">
-                                        <div class="top-gd">
-                                            <h6>1600</h6>
-                                            <p>Minimal Designs</p>
-                                        </div>
-                                        <div class="top-gd">
-                                            <h6>700</h6>
-                                            <p>In Process</p>
-                                        </div>
-                                        <div class="top-gd">
-                                            <h6>900</h6>
-                                            <p>New Ideas</p>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                    <div class="top-content-right">
-                                        <div class="thim-click-to-bottom">
-                                            <div class="rotate">
-                                                <a href="#about" class="scroll">
-                                                   <i class="fas fa-angle-double-down"></i>
-                                                   Scroll
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <!--//sub-content-->
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="slider-info bg4">
-                        <div class="bs-slider-overlay">
-                            <div class="banner-text-w3layouts container">
-                                <h5 class="tag text-left mb-3 ">Inspiring livings</h5>
-                                <h4 class="movetxt text-left agile-title text-uppercase">Measuring dreams for building future</h4>
-                                <!--/sub-content-->
-                                <div class="top-content-info">
-                                    <div class="top-content-left">
-                                        <div class="top-gd">
-                                            <h6>1300</h6>
-                                            <p>Interiror Designs</p>
-                                        </div>
-                                        <div class="top-gd">
-                                            <h6>800</h6>
-                                            <p>In Process</p>
-                                        </div>
-                                        <div class="top-gd">
-                                            <h6>900</h6>
-                                            <p>New Ideas</p>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                    <div class="top-content-right">
-                                        <div class="thim-click-to-bottom">
-                                            <div class="rotate">
-                                                <a href="#about" class="scroll">
-                                                   <i class="fas fa-angle-double-down"></i>
-                                                   Scroll
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <!--//sub-content-->
-                            </div>
-                        </div>
-                    </div>
-                </li>
+                 @endforeach
             </ul>
         </div>
     </section>

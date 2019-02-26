@@ -130,4 +130,11 @@ class SliderController extends Controller
     {
         //
     }
+
+    public function delete(Request $request)
+    {
+        $id=$request['id'];
+        Slider::slider_delete($id);
+         return redirect('/admin/sliders/index');
+    }
 }

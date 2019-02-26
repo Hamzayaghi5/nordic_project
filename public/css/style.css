@@ -187,38 +187,10 @@ li.nav-item {
 
 /*-- banner --*/
 
-.bg1 {
-    background: url(../images/banner1.jpg)no-repeat center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -ms-background-size: cover;
-    background-size: cover;
-    height: 50vw;
-}
 
-.bg2 {
-    background: url(../images/banner2.jpg)no-repeat center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -ms-background-size: cover;
-    background-size: cover;
-    height: 50vw;
-}
 
-.bg3 {
-    background: url(../images/banner3.jpg)no-repeat center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -ms-background-size: cover;
-    background-size: cover;
-    height: 50vw;
-}
+.bg {
 
-.bg4 {
-    background: url(../images/banner4.jpg)no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
