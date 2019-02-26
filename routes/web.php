@@ -80,4 +80,20 @@ Route::post('admin/products/update/{id}', 'ProductController@update');
 
 Route::get('admin/products/delete/{id}', 'ProductController@delete');
 
+//*****************************************************************************************************************************************
+
+
+
+Route::get('admin/sliders/index', 'SliderController@index');
+
+Route::get('admin/sliders/create', 'SliderController@create');
+
+Route::post('admin/sliders/create', 'SliderController@store');
+
+Route::get('admin/sliders/update/{id}', 'SliderController@edit');
+
+Route::post('admin/sliders/update/{id}', 'SliderController@update');
+
+Route::get('admin/sliders/delete/{id}', 'SliderController@delete');
+
 });

@@ -51,8 +51,8 @@ class SliderController extends Controller
                 }
 
             }
-        Slider::slider_insert($category_id,$title,$description,$img_url);
-         return redirect('/admin/products/index');
+        Slider::slider_insert($main_title,$sub_title,$img_url);
+         return redirect('/admin/sliders/index');
     }
     return response()->json([],400);
 
@@ -75,9 +75,11 @@ class SliderController extends Controller
      * @param  \App\Slider  $slider
      * @return \Illuminate\Http\Response
      */
-    public function edit(Slider $slider)
+    public function edit(Request $request)
     {
-        //
+        $id=$request['id'];
+        $slider=Slider::get($id);
+        return view('admin.slider.update',compact('slider'));
     }
 
     /**
@@ -87,9 +89,35 @@ class SliderController extends Controller
      * @param  \App\Slider  $slider
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Slider $slider)
+     public function update(Request $request)
+    {   
+        $data=$request->all();
+        $id=$request['id'];
+        $main_title=$data['main_title'];
+        $sub_title=$data['sub_title'];
+ 
+      if($request->file('img_url')!= null){
+
+            $path;
+            if(request()->file('img_url')->isValid()){
+                $path = $request->file('img_url')->storeAs('public', time().'.jpg');
+                $img_url=str_replace('public/', '', $path);
+                if(empty($path)){
+                    return response()->json([],400);
+                }
+
+            }
+      Slider::slider_update($id,$main_title,$sub_title,$img_url);
+    }
+    else
     {
-        //
+        $slider=Slider::get($id);
+        Slider::slider_update($id,$main_title,$sub_title,$slider->img_url);
+    }
+
+       
+         return redirect('/admin/sliders/index');
+
     }
 
     /**

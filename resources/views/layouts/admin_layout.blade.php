@@ -143,6 +143,12 @@
           <i class="fas fa-fw fa-table"></i>
           <span>Products</span></a>
       </li>
+
+          <li class="nav-item">
+        <a class="nav-link" href="/admin/sliders/index">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Slider</span></a>
+      </li>
     </ul>
 
      <div id="content-wrapper">

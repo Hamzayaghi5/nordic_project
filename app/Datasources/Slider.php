@@ -39,7 +39,7 @@ class Slider extends Model
     {
 
     
-        $slider=Category::Slider($id);
+        $slider=Slider::find($id);
     	$slider->main_title=$main_title;
     	$slider->sub_title=$sub_title;
         $slider->img_url=$img_url;
@@ -50,7 +50,7 @@ class Slider extends Model
 
     public static function slider_delete($id)
     {
-    	$slider=Category::find($id);
+    	$slider=Slider::find($id);
     	$slider->delete();
     }
 
