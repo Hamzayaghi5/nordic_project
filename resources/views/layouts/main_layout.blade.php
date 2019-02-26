@@ -63,12 +63,12 @@
                        
                         <ul class="navbar-nav ml-lg-auto text-center">
                             <li class="nav-item cool">
-                                <a class="nav-link" href="index.html">Home
+                                <a class="nav-link" href="/">Home
                             <span class="sr-only">(current)</span>
                         </a>
                             </li>
-                            <li class="nav-item cool active">
-                                <a class="nav-link" href="/about">About</a>
+                            <li class="nav-item cool">
+                                <a class="nav-link active" href="/about">About</a>
                             </li>
                             <li class="nav-item cool">
                                 <a class="nav-link" href="/services">Services</a>
@@ -443,10 +443,12 @@
 
     <script type="text/javascript">
         
+        $(document).ready(function(){
         $('.navbar-nav').on('click', 'li', function() {
     $('.navbar-nav li.active').removeClass('active');
     $(this).addClass('active');
 });
+        });
     </script>
     <!-- //js -->
 </body>

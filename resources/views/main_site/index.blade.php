@@ -63,18 +63,18 @@
     
                         <ul class="navbar-nav ml-lg-auto text-center">
                             <li class="nav-item active cool">
-                                <a class="nav-link" href="index.html">Home
+                                <a class="nav-link" href="/">Home
 							<span class="sr-only">(current)</span>
 						</a>
                             </li>
                             <li class="nav-item cool">
-                                <a class="nav-link" href="about.html">About</a>
+                                <a class="nav-link" href="/about">About</a>
                             </li>
                             <li class="nav-item cool">
-                                <a class="nav-link" href="services.html">Services</a>
+                                <a class="nav-link" href="/services">Services</a>
                             </li>
                             <li class="nav-item cool">
-                                <a class="nav-link" href="gallery.html">Gallery</a>
+                                <a class="nav-link" href="/gallery">Gallery</a>
                             </li>
                             <li class="nav-item dropdown cool">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
