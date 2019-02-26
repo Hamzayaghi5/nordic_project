@@ -8,6 +8,17 @@
 <html lang="zxx">
 
 <head>
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135194491-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-135194491-1');
+</script>
     <title> Inwardly Interior Category Bootstrap Responsive Website Template | About :: W3layouts</title>
 
     <!-- Meta tag Keywords -->
