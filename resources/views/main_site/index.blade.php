@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.css')}}" type="text/css" media="all">
     <link rel="stylesheet" href="{{ asset('css/owl.theme.css')}}" type="text/css" media="all">
     <link rel="stylesheet" href="{{ asset('css/style.css')}}" type="text/css" media="all" />
+
     <!-- Style-CSS -->
     <link href="{{ asset('css/prettyPhoto.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('css/style6.css')}}" rel='stylesheet' type='text/css' />
@@ -41,6 +42,7 @@
     <!--web font-->
     <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/main.css')}}" type="text/css" media="all" />
     <!--//web font-->
 
 </head>
@@ -131,6 +133,9 @@
                             <div class="banner-text-w3layouts container">
                                 <h5 class="tag text-left mb-3">{{$slider->main_title}}</h5>
                                 <h4 class="movetxt text-left agile-title text-uppercase">{{$slider->sub_title}}</h4>
+                                 <a  style="color:white" class="btn btn-primary">
+                                       contact us 
+                                    </a>
                                 <!--/sub-content-->
                                 <div class="top-content-info">
                                     <div class="top-content-right">
@@ -144,8 +149,7 @@
                                         </div>
                                     </div>
                                     <div class="clearfix"></div>
-                                </div>
-                                <!--//sub-content-->
+                                </div>                                <!--//sub-content-->
                             </div>
                         </div>
                     </div>
