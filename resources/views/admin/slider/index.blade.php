@@ -14,14 +14,14 @@
           <li class="breadcrumb-item">
             <a href="#">Dashboard</a>
           </li>
-          <li class="breadcrumb-item active">Tables</li>
+          <li class="breadcrumb-item active" style="text-transform: capitalize;">{{Request::segment(2)}}</li>
         </ol>
 
         <!-- DataTables Example -->
         <div class="card mb-3">
           <div class="card-header">
             <i class="fas fa-table"></i>
-            sliders</div>
+            {{Request::segment(2)}}</div>
           <div class="card-body">
             <div class="table-responsive">
               <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -29,7 +29,7 @@
                   <tr>
                     <th>#</th>
                     <th>Main title</th>
-                    <th>Sub Title</th>
+                    <th style="width: 25%;">Sub Title</th>
                     <th>Image</th>
                     <th>Operations</th>
 
@@ -41,7 +41,7 @@
                     <td>{{$slider->id }}</td>
                     <td>{{$slider->main_title }}</td>
                     <td>{{$slider->sub_title }}</td>
-                    <td><img class="img-responsive col-xs-12 col-sm-3" src="{{env('image_storage') }}/{{$slider->img_url}}"></td>
+                    <td><img class="img-responsive col-lg-4" src="{{env('image_storage') }}/{{$slider->img_url}}"></td>
                     <td style="width: 17%;"><div class="container">
                       <div  class="row"><a style="margin-left:1%" href="/admin/sliders/update/{{$slider->id}}"><button class="btn btn-primary" aria-hidden="true">Edit</button></a><a  style="margin-left:1%;color:rgba(204, 0, 0, 1);" onclick="return confirm('Are you sure you want to delete this image from slider')" href="/admin/sliders/delete/{{$slider->id}}"><button class="btn btn-danger" aria-hidden="true">Delete</button></a></div>
                       </div>

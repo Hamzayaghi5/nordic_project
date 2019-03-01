@@ -12,14 +12,14 @@
           <li class="breadcrumb-item">
             <a href="#">Dashboard</a>
           </li>
-          <li class="breadcrumb-item active">Tables</li>
+          <li class="breadcrumb-item active" style="text-transform: capitalize;">{{Request::segment(2)}}</li>
         </ol>
 
         <!-- DataTables Example -->
         <div class="card mb-3">
           <div class="card-header">
             <i class="fas fa-table"></i>
-            Data Table Example</div>
+            {{Request::segment(2)}}</div>
           <div class="card-body">
             <div class="table-responsive">
               <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -41,7 +41,7 @@
                     <td>{{$product->id }}</td>
                     <td>{{$product->title }}</td>
                     <td>{{$product->description }}</td>
-                       <td><img class="img-responsive col-lg-6" src="{{env('image_storage') }}/{{$product->image}}"></td>
+                       <td><img class="img-responsive col-md" src="{{env('image_storage') }}/{{$product->image}}"></td>
                     <td>{{$product->category->name }}</td>
                     <td>{{$product->created_at }}</td>
                     <td style="width: 17%;"><div class="container">
