@@ -24,6 +24,8 @@ Route::get('/contact', 'SiteController@contact')->name('contact');
 
 Route::get('/services', 'SiteController@services')->name('services');
 
+Route::get('/single', 'SiteController@single')->name('services');
+
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 
 

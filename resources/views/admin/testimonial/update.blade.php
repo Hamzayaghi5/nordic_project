@@ -17,6 +17,13 @@
 	</div>
 
 
+		<div class="form-group">
+		<label for="exampleInputEmail1">Testimonial Country</label>
+		<input name="country" class="form-control"  id="comment" value="{{$testimonial->country}}" required>
+		
+	</div>
+
+
 
 	<label for="exampleInputEmail1">Image</label>
 	<input class="active" type="file" name="image" enctype="multipart/form-data">

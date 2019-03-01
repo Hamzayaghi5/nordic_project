@@ -2,13 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Contact;
 use Illuminate\Http\Request;
-use App\Category;
-use App\Product;
-use App\Slider;
-use App\Testimonial;
 
-class SiteController extends Controller
+class ContactController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,32 +14,7 @@ class SiteController extends Controller
      */
     public function index()
     {
-        $sliders=Slider::get_all();
-        $testimonials=Testimonial::get_all();
-        return view('main_site.index',compact('sliders','testimonials'));
-    }
-
-
-    public function about()
-    {
-        return view('main_site.about');
-    }
-
-    public function single()
-    {
-        return view('main_site.single');
-    }
-
-
-    public function contact()
-    {
-      return view('main_site.contact');
-    }
-
-
-    public function services()
-    {
-     return view('main_site.services');
+        //
     }
 
     /**
@@ -69,10 +41,10 @@ class SiteController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Contact $contact)
     {
         //
     }
@@ -80,10 +52,10 @@ class SiteController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Contact $contact)
     {
         //
     }
@@ -92,10 +64,10 @@ class SiteController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Contact $contact)
     {
         //
     }
@@ -103,10 +75,10 @@ class SiteController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Contact $contact)
     {
         //
     }

@@ -40,13 +40,15 @@
     <!-- css files -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <!-- Bootstrap-Core-CSS -->
-    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css" media="all">
-    <link rel="stylesheet" href="css/owl.theme.css" type="text/css" media="all">
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}" type="text/css" media="all">
+    <link rel="stylesheet" href="{{ asset('css/owl.theme.css') }}" type="text/css" media="all">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css" media="all" />
     <!-- Style-CSS -->
-    <link href="css/prettyPhoto.css" rel="stylesheet" type="text/css" />
-    <link href="css/style6.css" rel='stylesheet' type='text/css' />
-    <link rel="stylesheet" href="css/fontawesome-all.css">
+    <link href="{{ asset('css/prettyPhoto.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('css/style6.css') }}" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="{{ asset('css/fontawesome-all.css') }}">
+
+    <link href="{{ asset('css/blog.css') }}" rel='stylesheet' type='text/css' />
     <!-- Font-Awesome-Icons-CSS -->
     <!-- //css files -->
     <!--web font-->
@@ -72,7 +74,7 @@
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                        
-                        <ul class="navbar-nav ml-lg-auto text-center">
+                        <ul id="main_nav" class="navbar-nav ml-lg-auto text-center">
                             <li class="nav-item cool">
                                 <a class="nav-link" href="/">Home
                             <span class="sr-only">(current)</span>
@@ -160,7 +162,7 @@
                             <p><span class="fab fa-instagram"></span> instagram/@my_website</p>
                             <p><span class="fab fa-youtube mb-5"></span> youtube/@my_website</p>
                             <a href="#" class="facebook-footer mr-2"><span class="fab mr-1 fa-facebook-f"></span> Facebook</a>
-                            <a href="#" class="twitter-footer"><span class="fab mr-1 fa-twitter"></span> Twitter</a>
+                            <a  href="#" class="twitter-footer"><span style="width: 4%" class="fab mr-1 fa-twitter"></span> Twitter</a>
                         </div>
                         <div class="col-md-6">
                             <h3 class="mb-4">Address</h3>
@@ -335,8 +337,8 @@
 
     <!--//model-form-->
     <!-- js -->
-    <script src="js/jquery-2.2.3.min.js"></script>
-    <script src="js/search.js"></script>
+    <script src="{{ asset('js/jquery-2.2.3.min.js') }}"></script>
+    <script src="{{ asset('js/search.js') }}"></script>
     <!-- /dropdown nav -->
     <script>
         $(document).ready(function() {
@@ -354,7 +356,7 @@
     </script>
     <!-- //dropdown nav -->
     <!-- Banner Responsiveslides -->
-    <script src="js/responsiveslides.min.js"></script>
+    <script src="{{ asset('js/responsiveslides.min.js') }}"></script>
     <script>
         // You can also use "$(window).load(function() {"
         $(function() {
@@ -377,14 +379,14 @@
     </script>
     <!-- // Banner Responsiveslides -->
     <!-- stats -->
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.countup.js"></script>
+    <script src="{{ asset('js/jquery.waypoints.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.countup.js') }}"></script>
     <script>
         $('.counter').countUp();
     </script>
     <!-- //stats -->
     <!-- carousel -->
-    <script src="js/owl.carousel.js"></script>
+    <script src="{{ asset('js/owl.carousel.js') }}"></script>
     <script>
         $(document).ready(function() {
             $('.owl-carousel').owlCarousel({
@@ -416,8 +418,8 @@
     </script>
     <!-- //carousel -->
     <!-- Smooth-Scrolling-JavaScript -->
-    <script src="js/easing.js"></script>
-    <script src="js/move-top.js"></script>
+    <script src="{{ asset('js/easing.js') }}"></script>
+    <script src="{{ asset('js/move-top.js') }}"></script>
     <script>
         jQuery(document).ready(function($) {
             $(".scroll, .navbar li a, .footer li a").click(function(event) {
@@ -449,17 +451,20 @@
     <!-- //Smooth-Scrolling-JavaScript -->
 
     <!-- /js -->
-    <script src="js/bootstrap.js"></script>
+    <script src="{{ asset('js/bootstrap.js') }}"></script>
 
 
     <script type="text/javascript">
         
-        $(document).ready(function(){
-        $('.navbar-nav').on('click', 'li', function() {
-    $('.navbar-nav li.active').removeClass('active');
-    $(this).addClass('active');
+
+
+
+$(document).ready(function(){
+  $('ul li a').click(function(){
+    $('li a').removeClass("active");
+    $(this).addClass("active");
 });
-        });
+});
     </script>
     <!-- //js -->
 </body>

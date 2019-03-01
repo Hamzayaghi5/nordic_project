@@ -9,7 +9,7 @@ class Testimonial extends Model
 {
     
      protected $fillable = [
-        'name', 'description','image'
+        'name', 'description','image','country'
     ];
 
     public static function get_all()
@@ -24,22 +24,24 @@ class Testimonial extends Model
     	return $testimonial;
     }
 
-    public static function testimonial_insert($name,$description,$image)
+    public static function testimonial_insert($name,$description,$image,$country)
     {
     	$testimonial=new Testimonial();
     	$testimonial->name=$name;
     	$testimonial->description=$description;
     	$testimonial->image=$image;
+        $testimonial->image=$country;
     	$testimonial->save();
     	return $testimonial;
     }
 
-       public static function testimonial_update($id,$name,$description,$image)
+       public static function testimonial_update($id,$name,$description,$image,$country)
     {
     	$testimonial=Testimonial::find($id);
     	$testimonial->name=$name;
     	$testimonial->description=$description;
     	$testimonial->image=$image;
+        $testimonial->country=$country;
     	$testimonial->save();
     	return $testimonial;
     }

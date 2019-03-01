@@ -37,6 +37,8 @@
     <link href="{{ asset('css/prettyPhoto.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('css/style6.css')}}" rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="{{ asset('css/fontawesome-all.css')}}">
+    
+
     <!-- Font-Awesome-Icons-CSS -->
     <!-- //css files -->
     <!--web font-->
@@ -54,9 +56,9 @@
         <header>
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light">
-                    <h1><a class="navbar-brand" href="index.html">
-				<span class="fab fa-osi"></span>  Inwardly
-                </a></h1>
+                    <a class="navbar-brand" href="index.html">
+				<img id="logo_image" src="{{ asset('images/NRDIC-4-1-1.gif')}}" class="img-responsive">
+                </a>
                     <button class="navbar-toggler ml-md-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -508,20 +510,20 @@
                         </div>
                     </div>
 
-                    @foreach($testimonials as $testimonial)
+                    @for ($i = 1; $i < count($testimonials); $i++)
                     <div class="carousel-item">
                         <div class="testimonials_grid center">
                             <div class="testimonials_grid-inn">
-                                <img src="{{env('image_storage') }}/{{$testimonial->image}}" alt=" " class="img-responsive" />
+                                <img src="{{env('image_storage') }}/{{$testimonials[$i]->image}}" alt=" " class="img-responsive" />
                             </div>
-                            <h3>{{$testimonial->name}}
+                            <h3>{{$testimonials[$i]->name}}
                                 <span>Customer</span>
                             </h3>
                             <label>United States</label>
-                            <p>{{$testimonial->description}}</p>
+                            <p>{{$testimonials[$i]->description}}</p>
                         </div>
                     </div>
-                    @endforeach
+                    @endfor
                     <a class="carousel-control-prev test" href="#carouselExampleControls" role="button" data-slide="prev">
 									<span class="fas fa-long-arrow-alt-left"></span>
 									<span class="sr-only">Previous</span>
@@ -562,7 +564,7 @@
                             <p><span class="fab fa-instagram"></span> instagram/@my_website</p>
                             <p><span class="fab fa-youtube mb-5"></span> youtube/@my_website</p>
                             <a href="#" class="facebook-footer mr-2"><span class="fab mr-1 fa-facebook-f"></span> Facebook</a>
-                            <a href="#" class="twitter-footer"><span class="fab mr-1 fa-twitter"></span> Twitter</a>
+                            <a href="#" class="twitter-footer"><span style="width: 4%" class="fab mr-1 fa-twitter"></span> Twitter</a>
                         </div>
                         <div class="col-md-6">
                             <h3 class="mb-4">Address</h3>

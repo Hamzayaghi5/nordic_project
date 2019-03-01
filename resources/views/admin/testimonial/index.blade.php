@@ -31,6 +31,7 @@
                     <th>name</th>
                     <th>description</th>
                     <th>image</th>
+                    <th>Country</th>
                     <th>created_at</th>
                     <th>Operations</th>
 
@@ -42,6 +43,7 @@
                     <td>{{$testimonial->id }}</td>
                     <td>{{$testimonial->name }}</td>
                     <td>{{$testimonial->description }}</td>
+                    <td>{{$testimonial->country }}</td>
                        <td><img class="img-responsive col-md" src="{{env('image_storage') }}/{{$testimonial->image}}"></td>
                     <td>{{$testimonial->created_at }}</td>
                     <td style="width: 17%;"><div class="container">

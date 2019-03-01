@@ -42,6 +42,7 @@ class TestimonialController extends Controller
              $data=$request->all();
         $name=$data['name'];
         $description=$data['description'];
+        $country=$data['country'];
  
       if($request->file('image')!= null){
 
@@ -54,7 +55,7 @@ class TestimonialController extends Controller
                 }
 
             }
-        Testimonial::testimonial_insert($name,$description,$image);
+        Testimonial::testimonial_insert($name,$description,$image,$country);
          return redirect('/admin/testimonials/index');
     }
 return Redirect::back()->withErrors('The image input must not be empty');
@@ -97,6 +98,7 @@ return Redirect::back()->withErrors('The image input must not be empty');
         $id=$request['id'];
         $name=$data['name'];
         $description=$data['description'];
+        $country=$data['country'];
  
       if($request->file('image')!= null){
 
@@ -109,13 +111,13 @@ return Redirect::back()->withErrors('The image input must not be empty');
                 }
 
             }
-      Testimonial::testimonial_update($id,$name,$description,$image);
+      Testimonial::testimonial_update($id,$name,$description,$image,$country);
     }
     else
     {
         $testimonial=Testimonial::get($id);
         $image=$testimonial->image;
-        Testimonial::testimonial_update($id,$name,$description,$image);
+        Testimonial::testimonial_update($id,$name,$description,$image,$country);
     }
 
        
