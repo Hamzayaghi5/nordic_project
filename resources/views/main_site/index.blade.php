@@ -498,102 +498,30 @@
                     <div class="carousel-item active">
                         <div class="testimonials_grid center">
                             <div class="testimonials_grid-inn">
-                                <img src="images/team3.jpg" alt=" " class="img-responsive" />
-                                <div class="test_social_pos">
-                                    <ul class="social_list1">
-                                        <li>
-                                            <a href="#" class="facebook1">
-														<i class="fab fa-facebook-f"></i>
-
-													</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="twitter2">
-														<i class="fab fa-twitter"></i>
-
-													</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="dribble3">
-														<i class="fab fa-dribbble"></i>
-													</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <img src="{{env('image_storage') }}/{{$testimonials[0]->image}}" alt=" " class="img-responsive" />
                             </div>
-                            <h3>Gretchen
+                            <h3>{{$testimonials[0]->name}}
                                 <span>Customer</span>
                             </h3>
                             <label>United States</label>
-                            <p>Maecenas interdum, metus vitae tincidunt porttitor, magna quam egestas sem, ac scelerisque nisl nibh vel lacus. Proin eget gravida odio. Donec ullamcorper est eu accumsan cursus.</p>
+                            <p>{{$testimonials[0]->description}}</p>
                         </div>
                     </div>
+
+                    @foreach($testimonials as $testimonial)
                     <div class="carousel-item">
-                        <div class="testimonials_grid text-center">
+                        <div class="testimonials_grid center">
                             <div class="testimonials_grid-inn">
-                                <img src="images/team1.jpg" alt=" " class="img-responsive" />
-                                <div class="test_social_pos">
-                                    <ul class="social_list1">
-                                        <li>
-                                            <a href="#" class="facebook1">
-														<i class="fab fa-facebook-f"></i>
-
-													</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="twitter2">
-														<i class="fab fa-twitter"></i>
-
-													</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="dribble3">
-														<i class="fab fa-dribbble"></i>
-													</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <img src="{{env('image_storage') }}/{{$testimonial->image}}" alt=" " class="img-responsive" />
                             </div>
-                            <h3>Anne Marc
+                            <h3>{{$testimonial->name}}
                                 <span>Customer</span>
                             </h3>
                             <label>United States</label>
-                            <p>Maecenas interdum, metus vitae tincidunt porttitor, magna quam egestas sem, ac scelerisque nisl nibh vel lacus. Proin eget gravida odio. Donec ullamcorper est eu accumsan cursus.</p>
+                            <p>{{$testimonial->description}}</p>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="testimonials_grid">
-                            <div class="testimonials_grid-inn">
-                                <img src="images/team3.jpg" alt=" " class="img-responsive" />
-                                <div class="test_social_pos">
-                                    <ul class="social_list1">
-                                        <li>
-                                            <a href="#" class="facebook1">
-														<i class="fab fa-facebook-f"></i>
-
-													</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="twitter2">
-														<i class="fab fa-twitter"></i>
-
-													</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="dribble3">
-														<i class="fab fa-dribbble"></i>
-													</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h3>Harry Baker
-                                <span>Customer</span>
-                            </h3>
-                            <label>United States</label>
-                            <p>Maecenas interdum, metus vitae tincidunt porttitor, magna quam egestas sem, ac scelerisque nisl nibh vel lacus. Proin eget gravida odio. Donec ullamcorper est eu accumsan cursus.</p>
-                        </div>
-                    </div>
+                    @endforeach
                     <a class="carousel-control-prev test" href="#carouselExampleControls" role="button" data-slide="prev">
 									<span class="fas fa-long-arrow-alt-left"></span>
 									<span class="sr-only">Previous</span>

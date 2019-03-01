@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Category;
 use App\Product;
 use App\Slider;
+use App\Testimonial;
 
 class SiteController extends Controller
 {
@@ -17,7 +18,8 @@ class SiteController extends Controller
     public function index()
     {
         $sliders=Slider::get_all();
-        return view('main_site.index',compact('sliders'));
+        $testimonials=Testimonial::get_all();
+        return view('main_site.index',compact('sliders','testimonials'));
     }
 
 
