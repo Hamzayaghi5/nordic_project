@@ -96,4 +96,18 @@ Route::post('admin/sliders/update/{id}', 'SliderController@update');
 
 Route::get('admin/sliders/delete/{id}', 'SliderController@delete');
 
+//*****************************************************************************************************************************************
+
+Route::get('admin/testimonials/index', 'TestimonialController@index');
+
+Route::get('admin/testimonials/create', 'TestimonialController@create');
+
+Route::post('admin/testimonials/create', 'TestimonialController@store');
+
+Route::get('admin/testimonials/update/{id}', 'TestimonialController@edit');
+
+Route::post('admin/testimonials/update/{id}', 'TestimonialController@update');
+
+Route::get('admin/testimonials/delete/{id}', 'TestimonialController@delete');
+
 });

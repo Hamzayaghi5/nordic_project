@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Product;
 use Illuminate\Http\Request;
 use App\Category;
+use Redirect;
 class ProductController extends Controller
 {
     /**
@@ -56,7 +57,7 @@ class ProductController extends Controller
         Product::product_insert($category_id,$title,$description,$img_name);
          return redirect('/admin/products/index');
     }
-    return response()->json([],400);
+    return Redirect::back()->withErrors('The image input must not be empty');
 
     }
 

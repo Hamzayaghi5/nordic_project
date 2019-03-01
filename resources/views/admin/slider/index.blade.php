@@ -5,7 +5,7 @@
       
       <a style="margin:1%" href="/admin/sliders/create" class="btn btn-success"><i style="color: white" class="fa fa-plus" aria-hidden="true"></i> Add New image to slider</a>  
       
-      
+
 
       <div class="container-fluid">
 

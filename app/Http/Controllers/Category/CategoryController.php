@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Category as category;
-
+use Redirect;
 
 class CategoryController extends Controller
 {
@@ -53,7 +53,8 @@ class CategoryController extends Controller
         category::category_insert($data['name'],$img_name);
          return redirect('/admin/categories/index');
     }
-    return response()->json([],400);
+    return Redirect::back()->withErrors('The image input must not be empty');
+
 
     }
 

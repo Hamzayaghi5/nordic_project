@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Slider;
 use Illuminate\Http\Request;
-
+use Redirect;
 class SliderController extends Controller
 {
     /**
@@ -54,7 +54,7 @@ class SliderController extends Controller
         Slider::slider_insert($main_title,$sub_title,$img_url);
          return redirect('/admin/sliders/index');
     }
-    return response()->json([],400);
+    return Redirect::back()->withErrors('The image input must not be empty');
 
     }
 
