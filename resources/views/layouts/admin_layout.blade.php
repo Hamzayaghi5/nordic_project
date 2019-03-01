@@ -122,6 +122,13 @@
           <i class="fas fa-fw fa-file-image-o"></i>
           <span>Slider</span></a>
       </li>
+
+           <li class="nav-item">
+        <a class="nav-link" href="/admin/testimonials/index">
+          <i class="fas fa-fw fa-file-image-o"></i>
+          <span>Testimonial</span></a>
+      </li>
+
     </ul>
 
      <div id="content-wrapper">

@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 
 class Testimonial extends Model
 {
@@ -20,7 +21,7 @@ class Testimonial extends Model
     public static function get($id)
     {
     	$testimonial=Testimonial::find($id);
-    	return $testimonial
+    	return $testimonial;
     }
 
     public static function testimonial_insert($name,$description,$image)
@@ -46,7 +47,9 @@ class Testimonial extends Model
        public static function testimonial_delete($id)
     {
     	$testimonial=Testimonial::find($id);
-    	$testimonial::delete();
+        Storage::delete($testimonial->image);
+    	$testimonial->delete();
+
     }
 
 

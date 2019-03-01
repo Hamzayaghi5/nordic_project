@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Testimonial;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+
 use Redirect;
 
 class TestimonialController extends Controller
@@ -76,9 +77,11 @@ return Redirect::back()->withErrors('The image input must not be empty');
      * @param  \App\Testimonial  $testimonial
      * @return \Illuminate\Http\Response
      */
-    public function edit(Testimonial $testimonial)
+    public function edit(Request $request)
     {
-        //
+        $id=$request['id'];
+        $testimonial=Testimonial::get($id);
+        return view('admin.testimonial.update',compact('testimonial'));
     }
 
     /**
@@ -88,9 +91,44 @@ return Redirect::back()->withErrors('The image input must not be empty');
      * @param  \App\Testimonial  $testimonial
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Testimonial $testimonial)
+     public function update(Request $request)
+    {   
+        $data=$request->all();
+        $id=$request['id'];
+        $name=$data['name'];
+        $description=$data['description'];
+ 
+      if($request->file('image')!= null){
+
+            $path;
+            if(request()->file('image')->isValid()){
+                $path = $request->file('image')->storeAs('public', time().'.jpg');
+                $image=str_replace('public/', '', $path);
+                if(empty($path)){
+                    return response()->json([],400);
+                }
+
+            }
+      Testimonial::testimonial_update($id,$name,$description,$image);
+    }
+    else
     {
-        //
+        $testimonial=Testimonial::get($id);
+        $image=$testimonial->image;
+        Testimonial::testimonial_update($id,$name,$description,$image);
+    }
+
+       
+        return redirect('/admin/testimonials/index');
+
+    }
+
+
+    public function delete(Request $request)
+    {
+        $id=$request['id'];
+        Testimonial::testimonial_delete($id);
+        return redirect('/admin/testimonials/index');
     }
 
     /**
