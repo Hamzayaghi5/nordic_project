@@ -34,7 +34,7 @@
   </select>
 </div>
 	<label for="exampleInputEmail1">Image</label>
-	<input class="active" type="file" name="img_name" enctype="multipart/form-data" required>
+	<input class="active" type="file" name="img_name[]" enctype="multipart/form-data" required multiple>
 	<br><br>
 	<button  type="submit" class="btn btn-success"><i style="color: white" class="fa fa-plus" aria-hidden="true"></i> Create Product</button>
 </form>

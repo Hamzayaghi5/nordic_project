@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Product;
 use Illuminate\Http\Request;
 use App\Category;
+use App\ProductImage;
 use Redirect;
 class ProductController extends Controller
 {

@@ -351,49 +351,43 @@
     </section> --}}
     <!---->
     <!--gallery  -->
-    <section class="gallery py-md-5 py-4">
-        <div class="gallery-inner py-md-5 py-4">
-          <h3 class="tittle text-center mb-md-5 mb-4">Our Categories</h3>
-     {{--          <ul class="portfolio-categ filter pb-5 mb-lg-3 text-center">
-                <li class="port-filter all active">
-                    <a href="#">All</a>
-                </li>
-                <li class="cat-item-1">
-                    <a href="#" title="Category 1">category 1</a>
-                </li>
-                <li class="cat-item-2">
-                    <a href="#" title="Category 2">category 2</a>
-                </li>
-                <li class="cat-item-3">
-                    <a href="#" title="Category 3">category 3</a>
-                </li>
-                <li class="cat-item-4">
-                    <a href="#" title="Category 4">category 4</a>
-                </li>
+    <section class="banner-bottom-w3ls bg-light py-md-5 py-4">
+        <div class="container">
+            <div class="inner-sec-wthreelayouts py-md-5 py-4">
+                <h2 class="tittle text-center mb-lg-5 mb-3">
+                    Featured Services</h2>
+                <!--/services-grids-->
+                <div class="service-mid-sec mt-lg-5 mt-4">
+                    <div class="middle-serve-content">
+                        <div class="row middle-grids">
+                          @foreach ($categories as $category)
+                              {{-- expr --}}
+                     
+                            <div class="col-lg-3 about-in middle-grid-info text-center">
+                                <div class="card img">
+                                    <div class="card-body img">
+                                        <a href="">
+                                        <img src="{{env('image_storage')}}/{{$category->image}}" alt="" class="img-fluid corner">
+                                        </a>
+                                        <h5 class="card-title">{{$category->name}}</h5>
+                                        <p class="card-text">{{$category->description}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            @endforeach
 
-            </ul> --}}
-            <ul class="portfolio-area clearfix">
-               @foreach($categories as $key => $category)
-                    {{-- expr --}}
-        
-                <li class="portfolio-item2" data-id="id-{{$key}}" data-type="cat-item-{{$key}}">
-                    <span class="image-block img-hover">
-                        <a class="image-zoom" href="{{env('image_storage')}}/{{$category->image}}" data-gal="prettyPhoto[gallery]">
-                            <img src="{{env('image_storage')}}/{{$category->image}}" class="img-fluid " alt="">
-                        </a>
-                    </span>
-                    <h4 style="text-align: center" class="mb-4">{{$category->name}}</h4>
-                </li>
-                @endforeach
-            </ul>
-            <!--end portfolio-area -->
+                        </div>
+                    </div>
+                </div>
+                <!--//services-grids-->
+            </div>
         </div>
-        <!-- //gallery container -->
     </section>
     <!-- //gallery -->
     <!-- stats -->
 
-    <section class="banner-bottom-w3ls pb-md-5 pb-4">
+{{--     <section class="banner-bottom-w3ls pb-md-5 pb-4">
         <div class="stats-in-content pb-md-5 pb-4">
             <div class="container-fluid">
                 <div class="row">
@@ -444,7 +438,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- //stats -->
     <!-- /testimonials -->

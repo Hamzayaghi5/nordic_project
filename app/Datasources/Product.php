@@ -10,6 +10,12 @@ class Product extends Model
         'category_id','title','description','image'
     ];
 
+
+        public function images()
+    {
+        return $this->HasMany('App\ProductImage');
+    }
+
     public function category()
     {
         return $this->belongsTo('App\Category','category_id');
@@ -17,13 +23,13 @@ class Product extends Model
 
      public static function get_all()
     {
-        $products = Product::with('category')->get();
+        $products = Product::with('category','images')->get();
         return $products;
     }
 
       public static function get($id)
     {
-        $product = Product::where('id',$id)->with('category')->first();
+        $product = Product::where('id',$id)->with('category','images')->first();
         return $product;
     }
 
@@ -34,7 +40,7 @@ class Product extends Model
         $product->category_id=$category_id;
         $product->title=$title;
         $product->description=$description;
-        $product->image=$image;
+        $product->image=env('image_storage')."/".$image;
         $product->save();
         return $product;
     }

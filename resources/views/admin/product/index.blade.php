@@ -43,7 +43,7 @@
                     <td>{{$product->id }}</td>
                     <td>{{$product->title }}</td>
                     <td>{{$product->description }}</td>
-                       <td><img class="img-responsive col-md" src="{{env('image_storage') }}/{{$product->image}}"></td>
+                       <td><img class="img-responsive col-md" src="{{env('image_storage') }}/{{$product->images[0]->image}}"></td>
                     <td>{{$product->category->name }}</td>
                     <td>{{$product->created_at }}</td>
                     <td style="width: 17%;"><div class="container">
