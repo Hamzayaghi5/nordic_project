@@ -43,21 +43,18 @@ class ProductController extends Controller
                     $category_id=$data['category_id'];
         $title=$data['title'];
         $description=$data['description'];
- 
-      if($request->file('img_name')!= null){
+        $product=Product::product_insert($category_id,$title,$description);
 
-            $path;
-            if(request()->file('img_name')->isValid()){
-                $path = $request->file('img_name')->storeAs('public', time().'.jpg');
-                $img_name=str_replace('public/', '', $path);
-                if(empty($path)){
-                    return response()->json([],400);
-                }
-
-            }
-        Product::product_insert($category_id,$title,$description,$img_name);
-         return redirect('/admin/products/index');
-    }
+                    if($request->hasFile('img_name')){
+            foreach ($request->file('img_name') as $file) {                    
+            $imagename=$file->getClientOriginalName();
+            $path_img=$file->storeAs('public/',$imagename);
+             $img_name=str_replace('public/', '', $path_img);
+             ProductImage::products_image_insert($product->id,$img_name);
+            
+             }
+             return redirect('/admin/products/index');
+        }
     return Redirect::back()->withErrors('The image input must not be empty');
 
     }
@@ -100,24 +97,21 @@ class ProductController extends Controller
         $category_id=$request['category_id'];
         $title=$request['title'];
         $description=$request['description'];
- 
-      if($request->file('img_name')!= null){
-
-            $path;
-            if(request()->file('img_name')->isValid()){
-                $path = $request->file('img_name')->storeAs('public', time().'.jpg');
-                $img_name=str_replace('public/', '', $path);
-                if(empty($path)){
-                    return response()->json([],400);
-                }
-
-            }
-     Product::product_update($id,$category_id,$title,$description,$img_name);
-    }
+        $product=Product::product_update($id,$category_id,$title,$description);
+                    if($request->hasFile('img_name')){
+            foreach ($request->file('img_name') as $file) {                 
+            $imagename=$file->getClientOriginalName();
+            $path_img=$file->storeAs('public/',$imagename);
+             $img_name=str_replace('public/', '', $path_img);
+             ProductImage::products_image_insert($product->id,$img_name);
+            
+             }
+             return redirect('/admin/products/index');
+        }
     else
     {
         $product=Product::get($id);
-        Product::product_update($id,$category_id,$title,$description,$product->image);
+        Product::product_update($id,$category_id,$title,$description);
     }
 
        
