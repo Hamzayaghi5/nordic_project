@@ -163,7 +163,7 @@
     </section>
     <!-- //banner -->
     <!--/banner-bottom-w3ls-->
-    <section class="banner-bottom-w3ls py-md-5 py-4" id="about">
+{{--     <section class="banner-bottom-w3ls py-md-5 py-4" id="about">
         <div class="container">
             <div class="inner-sec-wthreelayouts py-md-5 py-4">
                 <div class="row">
@@ -274,9 +274,9 @@
                 <!--//progress-->
             </div>
         </div>
-    </section>
+    </section> --}}
     <!--//banner-bottom-w3ls-->
-
+{{-- 
     <section class="banner-bottom-w3ls pb-md-5 pb-4">
         <div class="container-fluid">
             <div class="row">
@@ -348,13 +348,13 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!---->
     <!--gallery  -->
     <section class="gallery py-md-5 py-4">
         <div class="gallery-inner py-md-5 py-4">
-            <h3 class="tittle text-center mb-md-5 mb-4">Latest Art Projects</h3>
-            <ul class="portfolio-categ filter pb-5 mb-lg-3 text-center">
+          <h3 class="tittle text-center mb-md-5 mb-4">Our Categories</h3>
+     {{--          <ul class="portfolio-categ filter pb-5 mb-lg-3 text-center">
                 <li class="port-filter all active">
                     <a href="#">All</a>
                 </li>
@@ -371,64 +371,20 @@
                     <a href="#" title="Category 4">category 4</a>
                 </li>
 
-            </ul>
+            </ul> --}}
             <ul class="portfolio-area clearfix">
-                <li class="portfolio-item2" data-id="id-0" data-type="cat-item-4">
+               @foreach($categories as $key => $category)
+                    {{-- expr --}}
+        
+                <li class="portfolio-item2" data-id="id-{{$key}}" data-type="cat-item-{{$key}}">
                     <span class="image-block img-hover">
-                        <a class="image-zoom" href="images/ab.jpg" data-gal="prettyPhoto[gallery]">
-                            <img src="images/ab.jpg" class="img-fluid " alt="">
+                        <a class="image-zoom" href="{{env('image_storage')}}/{{$category->image}}" data-gal="prettyPhoto[gallery]">
+                            <img src="{{env('image_storage')}}/{{$category->image}}" class="img-fluid " alt="">
                         </a>
                     </span>
+                    <h4 style="text-align: center" class="mb-4">{{$category->name}}</h4>
                 </li>
-                <li class="portfolio-item2" data-id="id-1" data-type="cat-item-2">
-                    <span class="image-block">
-                        <a class="image-zoom" href="images/ab2.jpg" data-gal="prettyPhoto[gallery]">
-                            <img src="images/ab2.jpg" class="img-fluid " alt="">
-                        </a>
-                    </span>
-                </li>
-                <li class="portfolio-item2" data-id="id-2" data-type="cat-item-1">
-                    <span class="image-block">
-                        <a class="image-zoom" href="images/ab1.jpg" data-gal="prettyPhoto[gallery]">
-                            <img src="images/ab1.jpg" class="img-fluid " alt="">
-                        </a>
-                    </span>
-                </li>
-                <li class="portfolio-item2" data-id="id-4" data-type="cat-item-3">
-                    <span class="image-block">
-                        <a class="image-zoom" href="images/ab3.jpg" data-gal="prettyPhoto[gallery]">
-                            <img src="images/ab3.jpg" class="img-fluid " alt="">
-                        </a>
-                    </span>
-                </li>
-                <li class="portfolio-item2" data-id="id-5" data-type="cat-item-2">
-                    <span class="image-block">
-                        <a class="image-zoom" href="images/ab4.jpg" data-gal="prettyPhoto[gallery]">
-                            <img src="images/ab4.jpg" class="img-fluid " alt="">
-                        </a>
-                    </span>
-                </li>
-                <li class="portfolio-item2" data-id="id-7" data-type="cat-item-1">
-                    <span class="image-block">
-                        <a class="image-zoom" href="images/ab6.jpg" data-gal="prettyPhoto[gallery]">
-                            <img src="images/ab6.jpg" class="img-fluid " alt="">
-                        </a>
-                    </span>
-                </li>
-                <li class="portfolio-item2" data-id="id-7" data-type="cat-item-1">
-                    <span class="image-block">
-                        <a class="image-zoom" href="images/ab8.jpg" data-gal="prettyPhoto[gallery]">
-                            <img src="images/ab8.jpg" class="img-fluid " alt="">
-                        </a>
-                    </span>
-                </li>
-                <li class="portfolio-item2" data-id="id-7" data-type="cat-item-1">
-                    <span class="image-block">
-                        <a class="image-zoom" href="images/ab5.jpg" data-gal="prettyPhoto[gallery]">
-                            <img src="images/ab5.jpg" class="img-fluid " alt="">
-                        </a>
-                    </span>
-                </li>
+                @endforeach
             </ul>
             <!--end portfolio-area -->
         </div>

@@ -10,3 +10,8 @@
 	width: 30%;
 }
 
+.corner
+{
+	border-top-left-radius: 15%;
+    border-bottom-right-radius: 15%;
+}

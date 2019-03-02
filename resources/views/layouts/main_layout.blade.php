@@ -49,6 +49,7 @@
     <link rel="stylesheet" href="{{ asset('css/fontawesome-all.css') }}">
 
     <link href="{{ asset('css/blog.css') }}" rel='stylesheet' type='text/css' />
+    <link href="{{ asset('css/main.css') }}" rel='stylesheet' type='text/css' />
     <!-- Font-Awesome-Icons-CSS -->
     <!-- //css files -->
     <!--web font-->

@@ -18,8 +18,9 @@ class SiteController extends Controller
     public function index()
     {
         $sliders=Slider::get_all();
+        $categories=Category::get_all();
         $testimonials=Testimonial::get_all();
-        return view('main_site.index',compact('sliders','testimonials'));
+        return view('main_site.index',compact('sliders','testimonials','categories'));
     }
 
 

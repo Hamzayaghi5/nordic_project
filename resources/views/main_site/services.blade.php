@@ -248,7 +248,7 @@
                             <div class="col-lg-4 about-in middle-grid-info text-center">
                                 <div class="card img">
                                     <div class="card-body img">
-                                        <img src="images/ab3.jpg" alt="" class="img-fluid">
+                                        <img src="images/ab3.jpg" alt="" class="img-fluid corner">
                                         <h5 class="card-title">Expertise</h5>
                                         <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing.
                                         </p>
@@ -258,7 +258,7 @@
                             <div class="col-lg-4 about-in middle-grid-info text-center">
                                 <div class="card img">
                                     <div class="card-body img">
-                                        <img src="images/ab5.jpg" alt="" class="img-fluid">
+                                        <img src="images/ab5.jpg" alt="" class="img-fluid corner">
                                         <h5 class="card-title">Sustainability</h5>
                                         <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing.
                                         </p>
@@ -268,7 +268,7 @@
                             <div class="col-lg-4 about-in middle-grid-info text-center">
                                 <div class="card img">
                                     <div class="card-body img">
-                                        <img src="images/ab8.jpg" alt="" class="img-fluid">
+                                        <img src="images/ab8.jpg" alt="" class="img-fluid corner">
                                         <h5 class="card-title">Visioning</h5>
                                         <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing.
                                         </p>
