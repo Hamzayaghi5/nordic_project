@@ -7,7 +7,7 @@ use App\Category;
 class Product extends Model
 {
    protected $fillable = [
-        'category_id','title','description','image'
+        'category_id','title','description'
     ];
 
 
@@ -34,25 +34,23 @@ class Product extends Model
     }
 
 
-       public static function product_insert($category_id,$title,$description,$image)
+       public static function product_insert($category_id,$title,$description)
     {
         $product = new Product;
         $product->category_id=$category_id;
         $product->title=$title;
         $product->description=$description;
-        $product->image=env('image_storage')."/".$image;
         $product->save();
         return $product;
     }
 
-         public static function product_update($id,$category_id,$title,$description,$image)
+         public static function product_update($id,$category_id,$title,$description)
     {
 
          $product = Product::find($id);
             $product->category_id=$category_id;
             $product->title=$title;
             $product->description=$description;
-            $product->image=$product->image;
             $product->save();
         return $product;
     }

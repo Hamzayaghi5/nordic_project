@@ -175,6 +175,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Spatie\Analytics\AnalyticsServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class
 
     ],
 
@@ -225,6 +226,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Analytics' => Spatie\Analytics\AnalyticsFacade::class,
+        'Image' => Intervention\Image\Facades\Image::class
 
     ],
 
