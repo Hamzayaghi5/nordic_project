@@ -18,6 +18,13 @@ class ContactController extends Controller
         return view('admin.Contact.index',compact('contact'));
     }
 
+
+    public function index_api()
+    {
+        $contact=Contact::get_all();
+        return compact('contact');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

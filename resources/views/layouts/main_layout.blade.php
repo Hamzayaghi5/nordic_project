@@ -471,6 +471,58 @@ $(document).ready(function(){
 });
 });
     </script>
+
+
+            <script type="text/javascript">
+        function social(){
+        $(function(){
+
+        var $social = $('#social');
+
+        var $phone = $('#phone');
+
+        var $email = $('#email');
+            
+        var $email2 = $('#email2');
+            
+        var $fax = $('#fax');
+            
+        var $phone2 = $('#phone2');
+            
+        var $phone3 = $('#phone3');
+        
+        var $location = $('#location');
+            
+        
+        $.ajax({
+        type: 'GET',
+        url:'/api/social/links/',
+        success: function(json){
+        $social.empty();
+        $phone.empty();
+        $phone2.empty();
+        $phone3.empty();
+        $email.empty();
+        $email2.empty();
+        $location.empty();
+        $fax.empty();
+        $social.append("<a itemprop='sameAs' target='blank' href='"+json['facebook'].option_value+"'><img class='img-responsive social-icon hvr-pulse-shrink' alt='Creative_hat / Freepik  facebook-icon' src='{{ asset('img/facebookIcon.png') }}'></a>");
+
+//        $social.append("<a target='blank' href='"+json['twitter'].option_value+"'><img class='img-responsive social-icon hvr-buzz' alt='Creative_hat / Freepik  tweeter-icon' src='{{ asset('img/tweeterIcon.png') }}'></a>");
+
+//        $social.append("<a href='"+json['telegram'].option_value+"'><img class='img-responsive social-icon hvr-grow-rotate' alt='Creative_hat / Freepik whatsapp-icon' src='{{ asset('img/whatsappIcon.png')}}'></a>");
+            $phone2.append("<span class='fa fa-mobile'></span><div class='link-div'><a itemprop='telephone' href='tell:"+json['phone2'].option_value+"'>"+json['phone2'].option_value+"</a>") 
+            $fax.append("<span class='fa fa-fax '></span><a itemprop='telephone' href='fax:"+json['fax'].option_value+"'>"+json['fax'].option_value+"</a>")
+            $location.append("<span class='fa fa-map-marker '></span><a itemprop='telephone' href='tell:"+json['location'].option_value+"'>"+json['location'].option_value+"</a>") 
+          $email2.append("<span class='fa fa-envelope'></span><a itemprop='email' href='mailto:"+json['email2'].option_value+"'>"+json['email2'].option_value+"</a>") 
+          $email.append("<span class='fa fa-envelope'></span><a itemprop='email' href='mailto:"+json['mail'].option_value+"'>"+json['mail'].option_value+"</a>") 
+        }
+        });
+        });
+        }
+        social(); 
+         
+        </script>
     <!-- //js -->
 </body>
 
