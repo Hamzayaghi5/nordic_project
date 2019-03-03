@@ -107,7 +107,7 @@
                             </li>
 
                             <li class="nav-item cool">
-                                <a class="nav-link" href="contact.html">Contact</a>
+                                <a class="nav-link" href="/contact">Contact</a>
                             </li>
                                <!-- /search -->
                                 <li class="search">

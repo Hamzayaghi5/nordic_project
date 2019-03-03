@@ -773,15 +773,7 @@
     <!-- Smooth-Scrolling-JavaScript -->
     <script src="{{ asset('js/easing.js') }} "></script>
     <script src="{{ asset('js/move-top.js') }} "></script>
-    <script>
-        jQuery(document).ready(function($) {
-            $(".scroll, .navbar li a, .footer li a").click(function(event) {
-                $('html,body').animate({
-                    scrollTop: $(this.hash).offset().top
-                }, 1000);
-            });
-        });
-    </script>
+
     <!-- //Smooth-Scrolling-JavaScript -->
     <script>
         $(document).ready(function() {
@@ -801,18 +793,28 @@
         });
     </script>
 
+      <script src="{{ asset('js/bootstrap.js') }} "></script>
+
     <!-- //Smooth-Scrolling-JavaScript -->
     <!-- jQuery-Photo-filter-lightbox-Gallery-plugin -->
     <!--// end-smoth-scrolling -->
-    <script src="{{ asset('js/jquery-1.7.2.js') }} "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script src="{{ asset('js/jquery.quicksand.js') }} "></script>
     <script src="{{ asset('js/script.js') }} "></script>
     <script src="{{ asset('js/jquery.prettyPhoto.js') }} "></script>
     <!-- //jQuery-Photo-filter-lightbox-Gallery-plugin -->
 
     <!-- //js -->
-    <script src="{{ asset('js/bootstrap.js') }} "></script>
-
+  
+    <script>
+        jQuery(document).ready(function($) {
+            $(".scroll, .navbar li a, .footer li a").click(function(event) {
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 1000);
+            });
+        });
+    </script>
 </body>
 
 </html>
