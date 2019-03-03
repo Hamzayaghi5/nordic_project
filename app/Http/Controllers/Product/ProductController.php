@@ -65,9 +65,12 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product)
+    public function show(Request $request)
     {
-        //
+        $id=$request['id'];
+        $product=Product::get($id);
+        $categories=Category::get_all();
+        return view('main_site.product_single',compact('product','categories'));
     }
 
     /**

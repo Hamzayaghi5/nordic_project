@@ -31,7 +31,7 @@ class SiteController extends Controller
 
     public function single()
     {
-        return view('main_site.single');
+        return view('main_site.product_single');
     }
 
 

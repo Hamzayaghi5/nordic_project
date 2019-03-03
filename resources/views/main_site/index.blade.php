@@ -363,7 +363,7 @@
                           @foreach ($categories as $category)
                               {{-- expr --}}
                      
-                            <div class="col-lg-3 about-in middle-grid-info text-center">
+                            <div class="col-lg-4 about-in middle-grid-info text-center">
                                 <div class="card img">
                                     <div class="card-body img">
                                         <a href="">

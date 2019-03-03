@@ -38,7 +38,7 @@
     </script>
     <!--// Meta tag Keywords -->
     <!-- css files -->
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
     <!-- Bootstrap-Core-CSS -->
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}" type="text/css" media="all">
     <link rel="stylesheet" href="{{ asset('css/owl.theme.css') }}" type="text/css" media="all">
@@ -48,7 +48,11 @@
     <link href="{{ asset('css/style6.css') }}" rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="{{ asset('css/fontawesome-all.css') }}">
 
+
+
     <link href="{{ asset('css/blog.css') }}" rel='stylesheet' type='text/css' />
+
+
     <link href="{{ asset('css/main.css') }}" rel='stylesheet' type='text/css' />
     <!-- Font-Awesome-Icons-CSS -->
     <!-- //css files -->
@@ -67,7 +71,7 @@
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <a class="navbar-brand" href="index.html">
-                <img src="">
+                <img id="logo_image" src="{{ asset('/images/NRDIC-4-1-1.gif') }} ">
                 </a>
                     <button class="navbar-toggler ml-md-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -181,7 +185,7 @@
                     <div class="blog-grids row mb-3">
                         <div class="col-md-4 blog-grid-left">
                             <a href="single.html">
-                            <img src="images/banner1.jpg" class="img-fluid" alt="">
+                            <img src="{{ asset('images/banner1.jpg') }} " class="img-fluid" alt="">
                         </a>
                         </div>
                         <div class="col-md-8 blog-grid-right">
@@ -197,7 +201,7 @@
                     <div class="blog-grids row mb-3">
                         <div class="col-md-4 blog-grid-left">
                             <a href="single.html">
-                            <img src="images/banner2.jpg" class="img-fluid" alt="">
+                            <img src="{{ asset('images/banner2.jpg') }}" class="img-fluid" alt="">
                         </a>
                         </div>
                         <div class="col-md-8 blog-grid-right">
@@ -213,7 +217,7 @@
                     <div class="blog-grids row mb-3">
                         <div class="col-md-4 blog-grid-left">
                             <a href="single.html">
-                            <img src="images/banner3.jpg" class="img-fluid" alt="">
+                            <img src="{{ asset('images/banner3.jpg') }}" class="img-fluid" alt="">
                         </a>
                         </div>
                         <div class="col-md-8 blog-grid-right">
