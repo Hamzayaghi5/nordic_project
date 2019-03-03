@@ -112,4 +112,11 @@ Route::post('admin/testimonials/update/{id}', 'TestimonialController@update');
 
 Route::get('admin/testimonials/delete/{id}', 'TestimonialController@delete');
 
+//*****************************************************************************************************************************************
+Route::get('admin/contact/index', 'ContactController@index');
+
+Route::get('admin/contact/update/{id}', 'ContactController@edit');
+
+Route::post('admin/contact/update/{id}', 'ContactController@update');
+
 });

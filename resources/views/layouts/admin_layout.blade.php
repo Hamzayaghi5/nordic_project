@@ -129,6 +129,13 @@
           <span>Testimonial</span></a>
       </li>
 
+              <li class="nav-item">
+        <a class="nav-link" href="/admin/contact/index">
+          <i class="fas fa-fw fa-file-image-o"></i>
+          <span>Contact</span></a>
+      </li>
+
+
     </ul>
 
      <div id="content-wrapper">

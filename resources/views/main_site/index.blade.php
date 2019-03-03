@@ -367,11 +367,11 @@
                                 <div class="card img">
                                     <div class="card-body img">
                                         <a href="">
-                                        <img src="{{env('image_storage')}}/{{$category->image}}" alt="" class="img-fluid corner">
+                                        <img style="height:200px" src="{{env('image_storage')}}/{{$category->image}}" alt="" class="img-fluid corner">
                                         </a>
                                         <h5 class="card-title">{{$category->name}}</h5>
-                                        <p class="card-text">{{$category->description}}
-                                        </p>
+                               {{--          <p class="card-text">{{$category->description}}
+                                        </p> --}}
                                     </div>
                                 </div>
                             </div>

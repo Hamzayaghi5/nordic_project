@@ -14,7 +14,8 @@ class ContactController extends Controller
      */
     public function index()
     {
-        //
+        $contact=Contact::get_all();
+        return view('admin.Contact.index',compact('contact'));
     }
 
     /**
@@ -55,9 +56,10 @@ class ContactController extends Controller
      * @param  \App\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function edit(Contact $contact)
+    public function edit($id)
     {
-        //
+        $contact=Contact::get($id);
+        return view('admin.Contact.update',compact('contact'));
     }
 
     /**
@@ -69,7 +71,16 @@ class ContactController extends Controller
      */
     public function update(Request $request, Contact $contact)
     {
-        //
+        $id=$request['id'];
+        $phone=$request['phone'];
+        $address=$request['address'];
+        $email=$request['email'];
+        $facebook=$request['facebook'];
+        $twitter=$request['twitter'];
+        $youtube=$request['youtube'];
+        $instagram=$request['instagram'];
+        Contact::contact_update($id,$phone,$address,$email,$facebook,$twitter,$youtube,$instagram);
+        return redirect('admin/contact/index');
     }
 
     /**
