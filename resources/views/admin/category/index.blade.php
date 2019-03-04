@@ -69,5 +69,26 @@
       </footer>
 
     </div>
+
+    <script type="text/javascript">
+      function sweetalert() {
+        return swal({
+  title: "Are you sure?",
+  text: "Once deleted, you will not be able to recover this imaginary file!",
+  icon: "warning",
+  buttons: true,
+  dangerMode: true,
+})
+.then((willDelete) => {
+  if (willDelete) {
+    swal("category deleted", {
+      icon: "success",
+    });
+  } else {
+    swal("Your category hasn't been deleted");
+  }
+});
+      }
+    </script>
     <!-- /.content-wrapper -->
     @endsection
