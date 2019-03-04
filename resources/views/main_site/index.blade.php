@@ -501,7 +501,7 @@
     <!-- //bottom-last -->
 
     <!--/footer-->
-    <footer class="footer-main-w3layouts py-md-5 py-4">
+     <footer class="footer-main-w3layouts py-md-5 py-4">
         <div class="container-fluid px-lg-5 px-3">
             <div class="row">
                 <div class="col-lg-5 footer-grid-w3ls">
@@ -510,20 +510,20 @@
                     <div class="row mt-4">
                         <div class="col-md-6">
                             <h3 class="text-capitalize mb-3">Connect With Social</h3>
-                            <p><span class="fab fa-twitter"></span> twitter/@my_website</p>
-                            <p><span class="fab fa-instagram"></span> instagram/@my_website</p>
-                            <p><span class="fab fa-youtube mb-5"></span> youtube/@my_website</p>
+                            <p id="twitter1"><span class="fab fa-twitter"></span> twitter/@my_website</p>
+                            <p id="instagram"><span class="fab fa-instagram"></span> instagram/@my_website</p>
+                            <p id="youtube"><span class="fab fa-youtube mb-5"></span> youtube/@my_website</p>
                             <a id="facebook" href="#" class="facebook-footer mr-2"><span class="fab mr-1 fa-facebook-f"></span> Facebook</a>
-                            <a id="twitter" href="#" class="twitter-footer"><span style="width: 4%" class="fab mr-1 fa-twitter"></span> Twitter</a>
+                            <a id="twitter"  href="#" class="twitter-footer"><span style="width: 4%" class="fab mr-1 fa-twitter"></span> Twitter</a>
                         </div>
                         <div class="col-md-6">
                             <h3 class="mb-4">Address</h3>
                             <address class="mb-0">
-							<p class="mb-2"><i class="fas fa-map-marker-alt"></i> 8088H 5th Street Parking, King <br>Block, New York City.</p>
-							<p><i class="fas mr-1 fa-phone"></i> +12 445 8453 8088</p>
-							<p><i class="fas mr-1 fa-fax"></i> +11 997 2040 9436 </p>
-							<p><i class="far mr-1 fa-envelope-open"></i> <a href="mailto:info@example.com">info@example.com</a></p>
-						</address>
+                            <p id="address" class="mb-2"><i class="fas fa-map-marker-alt"></i> 8088H 5th Street Parking, King <br>Block, New York City.</p>
+                            <p id="phone"><i class="fas mr-1 fa-phone"></i> +12 445 8453 8088</p>
+                            <p><i class="fas mr-1 fa-fax"></i> +11 997 2040 9436 </p>
+                            <p id="email"><i class="far mr-1 fa-envelope-open"></i> <a href="mailto:info@example.com">info@example.com</a></p>
+                        </address>
                         </div>
                     </div>
                 </div>
@@ -532,8 +532,8 @@
                     <div class="blog-grids row mb-3">
                         <div class="col-md-4 blog-grid-left">
                             <a href="single.html">
-							<img src="images/banner1.jpg" class="img-fluid" alt="">
-						</a>
+                            <img src="{{ asset('images/banner1.jpg') }} " class="img-fluid" alt="">
+                        </a>
                         </div>
                         <div class="col-md-8 blog-grid-right">
                             <h5>
@@ -541,15 +541,15 @@
                             </h5>
                             <div class="sub-meta">
                                 <span>
-								<i class="far fa-clock"></i> 10 June, 2018</span>
+                                <i class="far fa-clock"></i> 10 June, 2018</span>
                             </div>
                         </div>
                     </div>
                     <div class="blog-grids row mb-3">
                         <div class="col-md-4 blog-grid-left">
                             <a href="single.html">
-							<img src="images/banner2.jpg" class="img-fluid" alt="">
-						</a>
+                            <img src="{{ asset('images/banner2.jpg') }}" class="img-fluid" alt="">
+                        </a>
                         </div>
                         <div class="col-md-8 blog-grid-right">
                             <h5>
@@ -557,15 +557,15 @@
                             </h5>
                             <div class="sub-meta">
                                 <span>
-								<i class="far fa-clock"></i> 22 June, 2018</span>
+                                <i class="far fa-clock"></i> 22 June, 2018</span>
                             </div>
                         </div>
                     </div>
                     <div class="blog-grids row mb-3">
                         <div class="col-md-4 blog-grid-left">
                             <a href="single.html">
-							<img src="images/banner3.jpg" class="img-fluid" alt="">
-						</a>
+                            <img src="{{ asset('images/banner3.jpg') }}" class="img-fluid" alt="">
+                        </a>
                         </div>
                         <div class="col-md-8 blog-grid-right">
                             <h5>
@@ -573,7 +573,7 @@
                             </h5>
                             <div class="sub-meta">
                                 <span>
-								<i class="far fa-clock"></i> 23 June, 2018</span>
+                                <i class="far fa-clock"></i> 23 June, 2018</span>
                             </div>
                         </div>
                     </div>
@@ -600,6 +600,7 @@
         </div>
     </footer>
     <!-- //footer -->
+
     <!--model-forms-->
     <!--/Login-->
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
@@ -687,11 +688,9 @@
     <!--//Register-->
 
     <!--//model-form-->
-
-    <!--//model-form-->
     <!-- js -->
-    <script src="{{ asset('js/jquery-2.2.3.min.js') }} "></script>
-    <script src="{{ asset('js/search.js') }} "></script>
+    <script src="{{ asset('js/jquery-2.2.3.min.js') }}"></script>
+    <script src="{{ asset('js/search.js') }}"></script>
     <!-- /dropdown nav -->
     <script>
         $(document).ready(function() {
@@ -709,7 +708,7 @@
     </script>
     <!-- //dropdown nav -->
     <!-- Banner Responsiveslides -->
-    <script src="{{ asset('js/responsiveslides.min.js') }} "></script>
+    <script src="{{ asset('js/responsiveslides.min.js') }}"></script>
     <script>
         // You can also use "$(window).load(function() {"
         $(function() {
@@ -732,14 +731,14 @@
     </script>
     <!-- // Banner Responsiveslides -->
     <!-- stats -->
-    <script src="{{ asset('js/jquery.waypoints.min.js') }} "></script>
-    <script src="{{ asset('js/jquery.countup.js') }} "></script>
+    <script src="{{ asset('js/jquery.waypoints.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.countup.js') }}"></script>
     <script>
         $('.counter').countUp();
     </script>
     <!-- //stats -->
     <!-- carousel -->
-    <script src="{{ asset('js/owl.carousel.js') }} "></script>
+    <script src="{{ asset('js/owl.carousel.js') }}"></script>
     <script>
         $(document).ready(function() {
             $('.owl-carousel').owlCarousel({
@@ -760,7 +759,7 @@
                         nav: false
                     },
                     1000: {
-                        items: 3,
+                        items: 4,
                         nav: true,
                         loop: false,
                         margin: 0
@@ -771,41 +770,8 @@
     </script>
     <!-- //carousel -->
     <!-- Smooth-Scrolling-JavaScript -->
-    <script src="{{ asset('js/easing.js') }} "></script>
-    <script src="{{ asset('js/move-top.js') }} "></script>
-
-    <!-- //Smooth-Scrolling-JavaScript -->
-    <script>
-        $(document).ready(function() {
-            /*
-            						var defaults = {
-            				  			containerID: 'toTop', // fading element id
-            							containerHoverID: 'toTopHover', // fading element hover id
-            							scrollSpeed: 1200,
-            							easingType: 'linear' 
-            				 		};
-            						*/
-
-            $().UItoTop({
-                easingType: 'easeOutQuart'
-            });
-
-        });
-    </script>
-
-      <script src="{{ asset('js/bootstrap.js') }} "></script>
-
-    <!-- //Smooth-Scrolling-JavaScript -->
-    <!-- jQuery-Photo-filter-lightbox-Gallery-plugin -->
-    <!--// end-smoth-scrolling -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-    <script src="{{ asset('js/jquery.quicksand.js') }} "></script>
-    <script src="{{ asset('js/script.js') }} "></script>
-    <script src="{{ asset('js/jquery.prettyPhoto.js') }} "></script>
-    <!-- //jQuery-Photo-filter-lightbox-Gallery-plugin -->
-
-    <!-- //js -->
-  
+    <script src="{{ asset('js/easing.js') }}"></script>
+    <script src="{{ asset('js/move-top.js') }}"></script>
     <script>
         jQuery(document).ready(function($) {
             $(".scroll, .navbar li a, .footer li a").click(function(event) {
@@ -815,6 +781,89 @@
             });
         });
     </script>
+    <!-- //Smooth-Scrolling-JavaScript -->
+    <script>
+        $(document).ready(function() {
+
+            social() ;
+            /*
+                                    var defaults = {
+                                        containerID: 'toTop', // fading element id
+                                        containerHoverID: 'toTopHover', // fading element hover id
+                                        scrollSpeed: 1200,
+                                        easingType: 'linear' 
+                                    };
+                                    */
+
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+            });
+
+        });
+    </script>
+
+    <!-- //Smooth-Scrolling-JavaScript -->
+
+    <!-- /js -->
+    <script src="{{ asset('js/bootstrap.js') }}"></script>
+
+
+    <script type="text/javascript">
+        
+
+
+
+$(document).ready(function(){
+  $('ul li a').click(function(){
+    $('li a').removeClass("active");
+    $(this).addClass("active");
+});
+});
+    </script>
+
+
+            <script type="text/javascript">
+  function social() {
+    $("#twitter1").html("");
+    $("#instagram").html("");
+    $("#youtube").html("");
+    $("#address").html("");
+    $("#email").html("");
+    $("#phone").html("");
+      $.ajax({
+     type: "GET",
+     url: '/api/contact',
+     data: "check",
+     success: function(response){
+        var contact=response.contact;
+        console.log(contact);
+
+        $("#facebook").attr("href","http://"+contact.facebook);
+        $("#twitter").attr("href","http://"+ contact.twitter);
+        $("#twitter1").html('<p id="twitter1"><span class="fab fa-twitter"></span>'+contact.twitter+'</p>');
+        $("#instagram").html('<p><span class="fab fa-instagram"></span>'+contact.instagram+'</p>');
+
+        $("#youtube").html('<p><span class="fab fa-youtube mb-5"></span>'+contact.youtube+'</p>');
+
+        $("#address").html(' <i class="fas fa-map-marker-alt"></i>'+contact.address);
+
+        $("#email").html('<i class="far mr-1 fa-envelope-open"></i> <a href="mailto:'+contact.email+'">'+contact.email+'</a>');
+
+        $("#phone").html('  <i class="fas mr-1 fa-phone"></i>'+contact.phone);
+
+
+        
+
+
+       
+
+
+     }
+});
+  }
+         
+        </script>
+    <!-- //js -->
 </body>
 
 </html>
