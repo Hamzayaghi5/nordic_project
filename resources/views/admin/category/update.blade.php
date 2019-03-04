@@ -10,6 +10,12 @@
 		<input name="name" class="form-control" rows="5" value="{{$category->name}}" id="comment" required>
 		
 	</div>
+
+				<div class="form-group">
+		<label for="exampleInputEmail1">Category Description</label>
+		<textarea name="description" class="form-control" rows="5" id="comment" required>{{$category->description}}</textarea>
+		
+	</div>
 	<label for="exampleInputEmail1">Image</label>
 	<input class="active" type="file" name="img" enctype="multipart/form-data">
 	<br><br>

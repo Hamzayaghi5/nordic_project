@@ -27,22 +27,24 @@ class Category extends Model
     	return $category;
     }
 
-    public static function category_insert($name,$image)
+    public static function category_insert($name,$description,$image)
     {
 
 
     	$category=new Category();
     	$category->name=$name;
+        $category->description=$description;
         $category->image=$image;
         $category->save();
     	return $category;
     }
-    public static function category_update($id,$name,$image)
+    public static function category_update($id,$name,$description,$image)
     {
 
     
         $category=Category::find($id);
         $category->name=$name;
+        $category->description=$description;
         $category->image=$category->image;
         $category->save();
 

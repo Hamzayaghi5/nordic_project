@@ -513,8 +513,8 @@
                             <p><span class="fab fa-twitter"></span> twitter/@my_website</p>
                             <p><span class="fab fa-instagram"></span> instagram/@my_website</p>
                             <p><span class="fab fa-youtube mb-5"></span> youtube/@my_website</p>
-                            <a href="#" class="facebook-footer mr-2"><span class="fab mr-1 fa-facebook-f"></span> Facebook</a>
-                            <a href="#" class="twitter-footer"><span style="width: 4%" class="fab mr-1 fa-twitter"></span> Twitter</a>
+                            <a id="facebook" href="#" class="facebook-footer mr-2"><span class="fab mr-1 fa-facebook-f"></span> Facebook</a>
+                            <a id="twitter" href="#" class="twitter-footer"><span style="width: 4%" class="fab mr-1 fa-twitter"></span> Twitter</a>
                         </div>
                         <div class="col-md-6">
                             <h3 class="mb-4">Address</h3>

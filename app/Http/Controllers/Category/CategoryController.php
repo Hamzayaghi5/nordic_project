@@ -50,7 +50,7 @@ class CategoryController extends Controller
                 }
 
             }
-        category::category_insert($data['name'],$img_name);
+        category::category_insert($data['name'],$data['description'],$img_name);
          return redirect('/admin/categories/index');
     }
     return Redirect::back()->withErrors('The image input must not be empty');

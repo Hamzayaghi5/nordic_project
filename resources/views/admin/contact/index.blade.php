@@ -3,7 +3,6 @@
     @section('content')
     <div id="content-wrapper">
       
-      <a style="margin:1%" href="/admin/categories/create" class="btn btn-success"><i style="color: white" class="fa fa-plus" aria-hidden="true"></i> Add New Contact</a>  
 
 
 
