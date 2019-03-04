@@ -41,7 +41,7 @@
                     <td>{{$category->name }}</td>
                     <td><img class="img-responsive col-xs-12 col-sm-3" src="{{env('image_storage') }}/{{$category->image}}"></td>
                     <td style="width: 17%;"><div class="container">
-                      <div  class="row"><a style="margin-left:1%" href="/admin/categories/update/{{$category->id}}"><button class="btn btn-primary" aria-hidden="true">Edit</button></a><a  style="margin-left:1%;color:rgba(204, 0, 0, 1);" onclick="return confirm('Are you sure you want to delete this category')" href="/admin/categories/delete/{{$category->id}}"><button class="btn btn-danger" aria-hidden="true">Delete</button></a></div>
+                      <div  class="row"><a style="margin-left:1%" href="/admin/categories/update/{{$category->id}}"><button class="btn btn-primary" aria-hidden="true">Edit</button></a><a  style="margin-left:1%;color:rgba(204, 0, 0, 1);" onclick="sweetalert()" href="/admin/categories/delete/{{$category->id}}"><button class="btn btn-danger" aria-hidden="true">Delete</button></a></div>
                       </div>
                     <div>
                     </td>
@@ -71,24 +71,34 @@
     </div>
 
     <script type="text/javascript">
-      function sweetalert() {
-        return swal({
-  title: "Are you sure?",
-  text: "Once deleted, you will not be able to recover this imaginary file!",
-  icon: "warning",
-  buttons: true,
-  dangerMode: true,
-})
-.then((willDelete) => {
-  if (willDelete) {
-    swal("category deleted", {
-      icon: "success",
-    });
-  } else {
-    swal("Your category hasn't been deleted");
-  }
-});
+document.querySelector('#from1').addEventListener('submit', function(e) {
+  var form = this;
+
+  e.preventDefault(); // <--- prevent form from submitting
+
+  swal({
+      title: "Are you sure?",
+      text: "You will not be able to recover this imaginary file!",
+      icon: "warning",
+      buttons: [
+        'No, cancel it!',
+        'Yes, I am sure!'
+      ],
+      dangerMode: true,
+    }).then(function(isConfirm) {
+      if (isConfirm) {
+        swal({
+          title: 'Shortlisted!',
+          text: 'Candidates are successfully shortlisted!',
+          icon: 'success'
+        }).then(function() {
+          form.submit(); // <--- submit form programmatically
+        });
+      } else {
+        swal("Cancelled", "Your imaginary file is safe :)", "error");
       }
+    })
+});
     </script>
     <!-- /.content-wrapper -->
     @endsection
