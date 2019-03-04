@@ -163,19 +163,19 @@
                     <div class="row mt-4">
                         <div class="col-md-6">
                             <h3 class="text-capitalize mb-3">Connect With Social</h3>
-                            <p><span class="fab fa-twitter"></span> twitter/@my_website</p>
-                            <p><span class="fab fa-instagram"></span> instagram/@my_website</p>
-                            <p><span class="fab fa-youtube mb-5"></span> youtube/@my_website</p>
-                            <a href="#" class="facebook-footer mr-2"><span class="fab mr-1 fa-facebook-f"></span> Facebook</a>
-                            <a  href="#" class="twitter-footer"><span style="width: 4%" class="fab mr-1 fa-twitter"></span> Twitter</a>
+                            <p id="twitter1"><span class="fab fa-twitter"></span> twitter/@my_website</p>
+                            <p id="instagram"><span class="fab fa-instagram"></span> instagram/@my_website</p>
+                            <p id="youtube"><span class="fab fa-youtube mb-5"></span> youtube/@my_website</p>
+                            <a id="facebook" href="#" class="facebook-footer mr-2"><span class="fab mr-1 fa-facebook-f"></span> Facebook</a>
+                            <a id="twitter"  href="#" class="twitter-footer"><span style="width: 4%" class="fab mr-1 fa-twitter"></span> Twitter</a>
                         </div>
                         <div class="col-md-6">
                             <h3 class="mb-4">Address</h3>
                             <address class="mb-0">
-                            <p class="mb-2"><i class="fas fa-map-marker-alt"></i> 8088H 5th Street Parking, King <br>Block, New York City.</p>
-                            <p><i class="fas mr-1 fa-phone"></i> +12 445 8453 8088</p>
+                            <p id="address" class="mb-2"><i class="fas fa-map-marker-alt"></i> 8088H 5th Street Parking, King <br>Block, New York City.</p>
+                            <p id="phone"><i class="fas mr-1 fa-phone"></i> +12 445 8453 8088</p>
                             <p><i class="fas mr-1 fa-fax"></i> +11 997 2040 9436 </p>
-                            <p><i class="far mr-1 fa-envelope-open"></i> <a href="mailto:info@example.com">info@example.com</a></p>
+                            <p id="email"><i class="far mr-1 fa-envelope-open"></i> <a href="mailto:info@example.com">info@example.com</a></p>
                         </address>
                         </div>
                     </div>
@@ -437,6 +437,8 @@
     <!-- //Smooth-Scrolling-JavaScript -->
     <script>
         $(document).ready(function() {
+
+            social() ;
             /*
                                     var defaults = {
                                         containerID: 'toTop', // fading element id
@@ -474,53 +476,44 @@ $(document).ready(function(){
 
 
             <script type="text/javascript">
-        function social(){
-        $(function(){
+  function social() {
+    $("#twitter1").html("");
+    $("#instagram").html("");
+    $("#youtube").html("");
+    $("#address").html("");
+    $("#email").html("");
+    $("#phone").html("");
+      $.ajax({
+     type: "GET",
+     url: '/api/contact',
+     data: "check",
+     success: function(response){
+        var contact=response.contact;
+        console.log(contact);
 
-        var $social = $('#social');
+        $("#facebook").attr("href","http://"+contact.facebook);
+        $("#twitter").attr("href","http://"+ contact.twitter);
+        $("#twitter1").html('<p id="twitter1"><span class="fab fa-twitter"></span>'+contact.twitter+'</p>');
+        $("#instagram").html('<p><span class="fab fa-instagram"></span>'+contact.instagram+'</p>');
 
-        var $phone = $('#phone');
+        $("#youtube").html('<p><span class="fab fa-youtube mb-5"></span>'+contact.youtube+'</p>');
 
-        var $email = $('#email');
-            
-        var $email2 = $('#email2');
-            
-        var $fax = $('#fax');
-            
-        var $phone2 = $('#phone2');
-            
-        var $phone3 = $('#phone3');
+        $("#address").html(' <i class="fas fa-map-marker-alt"></i>'+contact.address);
+
+        $("#email").html('<i class="far mr-1 fa-envelope-open"></i> <a href="mailto:'+contact.email+'">'+contact.email+'</a>');
+
+        $("#phone").html('  <i class="fas mr-1 fa-phone"></i>'+contact.phone);
+
+
         
-        var $location = $('#location');
-            
-        
-        $.ajax({
-        type: 'GET',
-        url:'/api/social/links/',
-        success: function(json){
-        $social.empty();
-        $phone.empty();
-        $phone2.empty();
-        $phone3.empty();
-        $email.empty();
-        $email2.empty();
-        $location.empty();
-        $fax.empty();
-        $social.append("<a itemprop='sameAs' target='blank' href='"+json['facebook'].option_value+"'><img class='img-responsive social-icon hvr-pulse-shrink' alt='Creative_hat / Freepik  facebook-icon' src='{{ asset('img/facebookIcon.png') }}'></a>");
 
-//        $social.append("<a target='blank' href='"+json['twitter'].option_value+"'><img class='img-responsive social-icon hvr-buzz' alt='Creative_hat / Freepik  tweeter-icon' src='{{ asset('img/tweeterIcon.png') }}'></a>");
 
-//        $social.append("<a href='"+json['telegram'].option_value+"'><img class='img-responsive social-icon hvr-grow-rotate' alt='Creative_hat / Freepik whatsapp-icon' src='{{ asset('img/whatsappIcon.png')}}'></a>");
-            $phone2.append("<span class='fa fa-mobile'></span><div class='link-div'><a itemprop='telephone' href='tell:"+json['phone2'].option_value+"'>"+json['phone2'].option_value+"</a>") 
-            $fax.append("<span class='fa fa-fax '></span><a itemprop='telephone' href='fax:"+json['fax'].option_value+"'>"+json['fax'].option_value+"</a>")
-            $location.append("<span class='fa fa-map-marker '></span><a itemprop='telephone' href='tell:"+json['location'].option_value+"'>"+json['location'].option_value+"</a>") 
-          $email2.append("<span class='fa fa-envelope'></span><a itemprop='email' href='mailto:"+json['email2'].option_value+"'>"+json['email2'].option_value+"</a>") 
-          $email.append("<span class='fa fa-envelope'></span><a itemprop='email' href='mailto:"+json['mail'].option_value+"'>"+json['mail'].option_value+"</a>") 
-        }
-        });
-        });
-        }
-        social(); 
+       
+
+
+     }
+});
+  }
          
         </script>
     <!-- //js -->
