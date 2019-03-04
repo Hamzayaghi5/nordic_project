@@ -12,7 +12,7 @@
                             </div>
                             <div class="col-md-9 address-right text-left">
                                 <h6 class="ad-info text-uppercase mb-2">Address</h6>
-                                <p> California, USA
+                                <p id="address1"> California, USA
 
                                 </p>
                             </div>
@@ -25,7 +25,7 @@
                             </div>
                             <div class="col-md-9 address-right text-left">
                                 <h6 class="ad-info text-uppercase mb-2">Email</h6>
-                                <p>Email :
+                                <p id="email1">Email :
                                     <a href="mailto:example@email.com"> mail@example.com</a>
                                 </p>
                             </div>
@@ -39,7 +39,7 @@
                             </div>
                             <div class="col-md-9 address-right text-left">
                                 <h6 class="ad-info text-uppercase mb-2">Phone</h6>
-                                <p>+1 234 567 8901</p>
+                                <p id="phone1">+1 234 567 8901</p>
 
                             </div>
                         </div>
