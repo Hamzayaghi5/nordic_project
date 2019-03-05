@@ -34,6 +34,13 @@ class Product extends Model
     }
 
 
+         public static function get_by_category($id)
+    {
+        $products = Product::where('category_id',$id)->with('category','images')->get();
+        return $products;
+    }
+
+
        public static function product_insert($category_id,$title,$description)
     {
         $product = new Product;

@@ -43,7 +43,8 @@ class SiteController extends Controller
 
     public function services()
     {
-     return view('main_site.services');
+        $categories=Category::get_all();
+     return view('main_site.services',compact('categories'));
     }
 
     /**
@@ -54,6 +55,13 @@ class SiteController extends Controller
     public function create()
     {
         //
+    }
+
+    public function gallery(Request $request)
+    {
+        $category_id=$request['category_id'];
+        $products=Product::get_by_category($category_id);
+        return view('main_site.gallery',compact('products'));
     }
 
     /**

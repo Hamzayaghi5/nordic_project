@@ -1,7 +1,7 @@
 @extends('layouts.main_layout')
 
 @section('content')
-<section class="banner-bottom-w3ls py-md-5 py-4">
+{{-- <section class="banner-bottom-w3ls py-md-5 py-4">
         <div class="container">
             <div class="inner-sec-wthreelayouts py-md-5 py-4">
                 <div class="row">
@@ -234,7 +234,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!---->
     <section class="banner-bottom-w3ls bg-light py-md-5 py-4">
         <div class="container">
@@ -243,40 +243,32 @@
                     Featured Services</h2>
                 <!--/services-grids-->
                 <div class="service-mid-sec mt-lg-5 mt-4">
+                      
                     <div class="middle-serve-content">
+                      
+                            {{-- expr --}}
+                     
                         <div class="row middle-grids">
+                            @foreach ($categories as $category)
+                            
                             <div class="col-lg-4 about-in middle-grid-info text-center">
                                 <div class="card img">
+                                    <a href="/galley/{{$category->id}}">
                                     <div class="card-body img">
-                                        <img src="images/ab3.jpg" alt="" class="img-fluid corner">
-                                        <h5 class="card-title">Expertise</h5>
-                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing.
+                                        <img src="{{env('image_storage')}}/{{$category->image}}" alt="" class="img-fluid corner">
+                                        <h5 class="card-title">{{$category->name}}</h5>
+                                        <p class="card-text">{{$category->description}}
                                         </p>
                                     </div>
+                                     </a>
                                 </div>
                             </div>
-                            <div class="col-lg-4 about-in middle-grid-info text-center">
-                                <div class="card img">
-                                    <div class="card-body img">
-                                        <img src="images/ab5.jpg" alt="" class="img-fluid corner">
-                                        <h5 class="card-title">Sustainability</h5>
-                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 about-in middle-grid-info text-center">
-                                <div class="card img">
-                                    <div class="card-body img">
-                                        <img src="images/ab8.jpg" alt="" class="img-fluid corner">
-                                        <h5 class="card-title">Visioning</h5>
-                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                       
+                              @endforeach
                         </div>
+                      
                     </div>
+
                 </div>
                 <!--//services-grids-->
             </div>

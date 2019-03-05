@@ -15,3 +15,9 @@
 	border-top-right-radius: 15%;
     border-bottom-left-radius: 15%;
 }
+
+
+
+.portfolio-item2 a {
+    cursor: pointer;
+}

@@ -24,13 +24,20 @@ Route::get('/contact', 'SiteController@contact')->name('contact');
 
 Route::get('/services', 'SiteController@services')->name('services');
 
-Route::get('/product single/{id}', 'ProductController@show')->name('product');
+
 
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 
 
+
+
+
 Route::post('/login', 'Auth\LoginController@login')->name('login');
 
+
+Route::get('/product single/{id}', 'ProductController@show')->name('product');
+
+Route::get('/gallery/{category_id}', 'SiteController@gallery')->name('gallery');
 //*****************************************************************************************************************************************
 //protected routes by the middleware
 Route::group(['middleware' => 'checkval'], function() {

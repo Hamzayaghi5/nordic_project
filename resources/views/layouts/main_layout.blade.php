@@ -94,7 +94,7 @@
                             <li class="nav-item cool">
                                 <a class="nav-link" href="/gallery">Gallery</a>
                             </li>
-                            <li class="nav-item dropdown cool">
+{{--                             <li class="nav-item dropdown cool">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Blog
                         </a>
@@ -104,7 +104,7 @@
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="404.html">404</a>
                                 </div>
-                            </li>
+                            </li> --}}
 
                             <li class="nav-item cool">
                                 <a class="nav-link" href="/contact">Contact</a>
@@ -421,29 +421,11 @@
             })
         })
     </script>
-    <!-- //carousel -->
-    <!-- Smooth-Scrolling-JavaScript -->
-    <script src="{{ asset('js/easing.js') }}"></script>
-    <script src="{{ asset('js/move-top.js') }}"></script>
-    <script>
-        jQuery(document).ready(function($) {
-            $(".scroll, .navbar li a, .footer li a").click(function(event) {
-                if ($(".scroll, .navbar li a, .footer li a").length) {
-                $('html,body').animate({
-                    scrollTop: $(this.hash).offset().top
-                }, 1000);
-            }
-            });
-        });
-    </script>
-    <!-- //Smooth-Scrolling-JavaScript -->
-    <script>
+
+
+        <script>
         $(document).ready(function() {
                       social();
-              $('ul li a').click(function(){
-    $('li a').removeClass("active");
-    $(this).addClass("active");
-});
 
                        if (!$(this).data('counterup-nums')) {
                         return;
@@ -465,6 +447,23 @@
 
         });
     </script>
+    <!-- //carousel -->
+    <!-- Smooth-Scrolling-JavaScript -->
+    <script src="{{ asset('js/easing.js') }}"></script>
+    <script src="{{ asset('js/move-top.js') }}"></script>
+{{--     <script>
+        jQuery(document).ready(function($) {
+            $(".scroll, .navbar li a, .footer li a").click(function(event) {
+                if ($(".scroll, .navbar li a, .footer li a").length) {
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 1000);
+            }
+            });
+        });
+    </script>
+    <!-- //Smooth --}}-Scrolling-JavaScript -->
+
 
     <!-- //Smooth-Scrolling-JavaScript -->
 
@@ -475,6 +474,15 @@
 
 
 <script type="text/javascript" src="{{ asset('js/contact.js') }}"></script>
+
+<script type="text/javascript">
+    var selector = '.nav li';
+    $(selector).on('click', function(){
+    $(selector).removeClass('active');
+    $(this).addClass('active');
+    console.log("hello");
+});
+</script>
     <!-- //js -->
 </body>
 
