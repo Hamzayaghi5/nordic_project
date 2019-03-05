@@ -253,7 +253,7 @@
                             
                             <div class="col-lg-4 about-in middle-grid-info text-center">
                                 <div class="card img">
-                                    <a href="/galley/{{$category->id}}">
+                                    <a href="/gallery/{{$category->id}}">
                                     <div class="card-body img">
                                         <img src="{{env('image_storage')}}/{{$category->image}}" alt="" class="img-fluid corner">
                                         <h5 class="card-title">{{$category->name}}</h5>
