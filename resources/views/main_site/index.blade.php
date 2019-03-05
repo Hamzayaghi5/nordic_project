@@ -77,9 +77,9 @@
                             <li class="nav-item cool">
                                 <a class="nav-link" href="/services">Services</a>
                             </li>
-                            <li class="nav-item cool">
+{{--                             <li class="nav-item cool">
                                 <a class="nav-link" href="/gallery">Gallery</a>
-                            </li>
+                            </li> --}}
 {{--                             <li class="nav-item dropdown cool">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							Blog
