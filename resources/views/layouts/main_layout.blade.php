@@ -357,6 +357,13 @@
                     $(this).toggleClass('open');
                 }
             );
+
+                                  social();
+ $('.navbar a').on('click', function () {
+     $('.navbar').find('li.active').removeClass('active');
+     $(this).parent('li').addClass('active');
+ });
+
         });
     </script>
     <!-- //dropdown nav -->
@@ -423,30 +430,7 @@
     </script>
 
 
-        <script>
-        $(document).ready(function() {
-                      social();
 
-                       if (!$(this).data('counterup-nums')) {
-                        return;
-                    }
-
-  
-            /*
-                                    var defaults = {
-                                        containerID: 'toTop', // fading element id
-                                        containerHoverID: 'toTopHover', // fading element hover id
-                                        scrollSpeed: 1200,
-                                        easingType: 'linear' 
-                                    };
-                                    */
-
-            $().UItoTop({
-                easingType: 'easeOutQuart'
-            });
-
-        });
-    </script>
     <!-- //carousel -->
     <!-- Smooth-Scrolling-JavaScript -->
     <script src="{{ asset('js/easing.js') }}"></script>
@@ -475,15 +459,10 @@
 
 <script type="text/javascript" src="{{ asset('js/contact.js') }}"></script>
 
-<script type="text/javascript">
-    var selector = '.nav li';
-    $(selector).on('click', function(){
-    $(selector).removeClass('active');
-    $(this).addClass('active');
-    console.log("hello");
-});
-</script>
     <!-- //js -->
+
+
+
 </body>
 
 </html>

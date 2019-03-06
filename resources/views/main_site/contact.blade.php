@@ -57,23 +57,29 @@
                     <div class="col-md-6 main_grid_contact">
                         <div class="form">
                             <h4 class="mb-4 text-left">Send us a message</h4>
-                            <form action="#" method="post">
+                            <form method="post" action="{{ route('contactus.store') }}">
+                                @csrf
                                 <div class="form-group">
                                     <label class="my-2">Name</label>
-                                    <input class="form-control" type="text" name="Name" placeholder="" required="">
+                                    <input class="form-control" type="text" name="name" placeholder="" required="">
                                 </div>
                                 <div class="form-group">
                                     <label>Email</label>
-                                    <input class="form-control" type="email" name="Email" placeholder="" required="">
+                                    <input class="form-control" type="email" name="email" placeholder="" required="">
                                 </div>
                                 <div class="form-group">
                                     <label>Message</label>
-                                    <textarea id="textarea" placeholder=""></textarea>
+                                    <textarea id="textarea" name="message" placeholder=""></textarea>
                                 </div>
                                 <div class="input-group1">
                                     <input class="form-control" type="submit" value="Submit">
                                 </div>
                             </form>
+                            @if(session()->has('success'))
+    <div style="margin-top:3%" class="alert alert-success">
+        {{ session()->get('success') }}
+    </div>
+@endif
                         </div>
                     </div>
                 </div>

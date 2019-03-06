@@ -788,19 +788,10 @@
 var selector = '.nav li';
 
             social() ;
-            /*
-                                    var defaults = {
-                                        containerID: 'toTop', // fading element id
-                                        containerHoverID: 'toTopHover', // fading element hover id
-                                        scrollSpeed: 1200,
-                                        easingType: 'linear' 
-                                    };
-                                    */
-
-            $().UItoTop({
-                easingType: 'easeOutQuart'
-            });
-
+ $('.navbar a').on('click', function () {
+     $('.navbar').find('li.active').removeClass('active');
+     $(this).parent('li').addClass('active');
+ });
         });
     </script>
 
@@ -815,24 +806,10 @@ var selector = '.nav li';
 
 
 
-$(document).ready(function(){
-  $('ul li a').click(function(){
-    $('li a').removeClass("active");
-    $(this).addClass("active");
-});
-});
     </script>
 
 <script type="text/javascript" src="{{ asset('js/contact.js') }}"></script>
     <!-- //js -->
 </body>
-<script type="text/javascript">
-    var selector = '.nav li';
-    $(selector).on('click', function(){
-    $(selector).removeClass('active');
-    $(this).addClass('active');
-    console.log($(this));
-});
-</script>
 
 </html>

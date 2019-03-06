@@ -26,6 +26,9 @@ Route::get('/services', 'SiteController@services')->name('services');
 
 
 
+
+Route::post('contact-us', ['as'=>'contactus.store','uses'=>'ContactUsController@contactSaveData']);
+
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 
 
