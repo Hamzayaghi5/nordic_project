@@ -489,7 +489,7 @@
     </div>
     <!-- //testimonials -->
     <!-- /bottom-last -->
-    <section class="bottom-last py-5 text-center">
+ {{--    <section class="bottom-last py-5 text-center">
         <div class="container">
             <h3 class="text-uppercase text-white mb-md-5 mb-4">Are you ready to improve your space?</h3>
             <div class="read last">
@@ -497,8 +497,36 @@
                                     <i class="fas fa-user"></i> Join Now</a>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- //bottom-last -->
+
+                <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 map">
+                      <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=london&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+
+                    </div>
+                    <div class="col-md-6 main_grid_contact">
+                        
+                            <h4 class="mb-4 text-left">Send us a message</h4>
+
+                                <div class="form-group">
+                                    <label class="my-2">Name</label>
+                                    <p class="my-2">Hello</p>
+                                </div>
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <p class="my-2">Hello</p>
+                                </div>
+                                <div class="form-group">
+                                    <label>Message</label>
+                                   <p class="my-2">Hello</p>
+                                </div>
+
+                        
+                    </div>
+                </div>
+            </div>
 
     <!--/footer-->
      <footer class="footer-main-w3layouts py-md-5 py-4">
