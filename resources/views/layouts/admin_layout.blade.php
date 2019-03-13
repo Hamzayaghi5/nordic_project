@@ -12,17 +12,17 @@
   <title>Nordic Admin</title>
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Custom fonts for this template-->
-  <link href="{{asset('admin/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
+  <link title="all.min.css" href="{{asset('admin/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
 
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script title="sweetalert.min.js" src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
   <!-- Page level plugin CSS-->
-  <link href="{{ asset('admin/vendor/datatables/dataTables.bootstrap4.css') }} " rel="stylesheet">
+  <link title="dataTables.bootstrap4.css" href="{{ asset('admin/vendor/datatables/dataTables.bootstrap4.css') }} " rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="{{ asset('admin/css/sb-admin.css') }}" rel="stylesheet">
+  <link title="sb-admin.css" href="{{ asset('admin/css/sb-admin.css') }}" rel="stylesheet">
 
-  <link href="{{ asset('admin/css/main.css') }}" rel="stylesheet">
+  <link title="main.css" href="{{ asset('admin/css/main.css') }}" rel="stylesheet">
 
 </head>
 
@@ -173,23 +173,23 @@
   </div>
 
   <!-- Bootstrap core JavaScript-->
-  <script src="{{ asset('admin/vendor/jquery/jquery.min.js') }} "></script>
-  <script src="{{ asset('admin/vendor/bootstrap/js/bootstrap.bundle.min.js') }} "></script>
+  <script title="jquery.min.js" src="{{ asset('admin/vendor/jquery/jquery.min.js') }} "></script>
+  <script title="bootstrap.bundle.min.js" src="{{ asset('admin/vendor/bootstrap/js/bootstrap.bundle.min.js') }} "></script>
 
   <!-- Core plugin JavaScript-->
-  <script src="{{ asset('admin/vendor/jquery-easing/jquery.easing.min.js') }} "></script>
+  <script title="bootstrap.bundle.min.js" src="{{ asset('admin/vendor/jquery-easing/jquery.easing.min.js') }} "></script>
 
   <!-- Page level plugin JavaScript-->
-  <script src="{{ asset('admin/vendor/chart.js/Chart.min.js') }} "></script>
-  <script src="{{ asset('admin/vendor/datatables/jquery.dataTables.js') }} "></script>
-  <script src="{{ asset('admin/vendor/datatables/dataTables.bootstrap4.js') }} "></script>
+  <script title="Chart.min.js" src="{{ asset('admin/vendor/chart.js/Chart.min.js') }} "></script>
+  <script title="jquery.dataTables.js" src="{{ asset('admin/vendor/datatables/jquery.dataTables.js') }} "></script>
+  <script title="dataTables.bootstrap4.js" src="{{ asset('admin/vendor/datatables/dataTables.bootstrap4.js') }} "></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="{{ asset('admin/js/sb-admin.min.js') }} "></script>
+  <script title="sb-admin.min.js" src="{{ asset('admin/js/sb-admin.min.js') }} "></script>
 
   <!-- Demo scripts for this page-->
-  <script src="{{ asset('admin/js/demo/datatables-demo.js') }}"></script>
-  <script src="{{ asset('admin/js/demo/chart-area-demo.js') }}"></script>
+  <script title="datatables-demo.js" src="{{ asset('admin/js/demo/datatables-demo.js') }}"></script>
+  <script title="chart-area-demo.js" src="{{ asset('admin/js/demo/chart-area-demo.js') }}"></script>
 
 </body>
 

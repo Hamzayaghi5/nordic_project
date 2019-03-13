@@ -11,7 +11,7 @@
 
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135194491-1"></script>
+<script title="google maps" async src="https://www.googletagmanager.com/gtag/js?id=UA-135194491-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -38,22 +38,22 @@
     </script>
     <!--// Meta tag Keywords -->
     <!-- css files -->
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+    <link title="bootstrap.css" rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
     <!-- Bootstrap-Core-CSS -->
-    <link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}" type="text/css" media="all">
-    <link rel="stylesheet" href="{{ asset('css/owl.theme.css') }}" type="text/css" media="all">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css" media="all" />
+    <link title="owl.carousel.css" rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}" type="text/css" media="all">
+    <link title="owl.theme.css" rel="stylesheet" href="{{ asset('css/owl.theme.css') }}" type="text/css" media="all">
+    <link title="style.css" rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css" media="all" />
     <!-- Style-CSS -->
-    <link href="{{ asset('css/prettyPhoto.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('css/style6.css') }}" rel='stylesheet' type='text/css' />
-    <link rel="stylesheet" href="{{ asset('css/fontawesome-all.css') }}">
+    <link title="prettyPhoto.css" href="{{ asset('css/prettyPhoto.css') }}" rel="stylesheet" type="text/css" />
+    <link title="style6.css" href="{{ asset('css/style6.css') }}" rel='stylesheet' type='text/css' />
+    <link title="fontawesome-all.css" rel="stylesheet" href="{{ asset('css/fontawesome-all.css') }}">
 
 
 
-    <link href="{{ asset('css/blog.css') }}" rel='stylesheet' type='text/css' />
+    <link title="blog.css" href="{{ asset('css/blog.css') }}" rel='stylesheet' type='text/css' />
 
 
-    <link href="{{ asset('css/main.css') }}" rel='stylesheet' type='text/css' />
+    <link title="main.css" href="{{ asset('css/main.css') }}" rel='stylesheet' type='text/css' />
     <!-- Font-Awesome-Icons-CSS -->
     <!-- //css files -->
     <!--web font-->
@@ -342,8 +342,8 @@
 
     <!--//model-form-->
     <!-- js -->
-    <script src="{{ asset('js/jquery-2.2.3.min.js') }}"></script>
-    <script src="{{ asset('js/search.js') }}"></script>
+    <script title="jquery-2.2.3.min.js" src="{{ asset('js/jquery-2.2.3.min.js') }}"></script>
+    <script title="search.js" src="{{ asset('js/search.js') }}"></script>
     <!-- /dropdown nav -->
     <script>
         $(document).ready(function() {
@@ -368,7 +368,7 @@
     </script>
     <!-- //dropdown nav -->
     <!-- Banner Responsiveslides -->
-    <script src="{{ asset('js/responsiveslides.min.js') }}"></script>
+    <script title="responsiveslides.min.js" src="{{ asset('js/responsiveslides.min.js') }}"></script>
     <script>
         // You can also use "$(window).load(function() {"
         $(function() {
@@ -391,14 +391,14 @@
     </script>
     <!-- // Banner Responsiveslides -->
     <!-- stats -->
-    <script src="{{ asset('js/jquery.waypoints.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.countup.js') }}"></script>
+    <script title="jquery.waypoints.min.js" src="{{ asset('js/jquery.waypoints.min.js') }}"></script>
+    <script title="jquery.countup.js" src="{{ asset('js/jquery.countup.js') }}"></script>
     <script>
         $('.counter').countUp();
     </script>
     <!-- //stats -->
     <!-- carousel -->
-    <script src="{{ asset('js/owl.carousel.js') }}"></script>
+    <script title="owl.carousel.js" src="{{ asset('js/owl.carousel.js') }}"></script>
     <script>
         $(document).ready(function() {
             $('.owl-carousel').owlCarousel({
@@ -433,8 +433,8 @@
 
     <!-- //carousel -->
     <!-- Smooth-Scrolling-JavaScript -->
-    <script src="{{ asset('js/easing.js') }}"></script>
-    <script src="{{ asset('js/move-top.js') }}"></script>
+    <script title="easing.js" src="{{ asset('js/easing.js') }}"></script>
+    <script title="move-top.js" src="{{ asset('js/move-top.js') }}"></script>
 {{--     <script>
         jQuery(document).ready(function($) {
             $(".scroll, .navbar li a, .footer li a").click(function(event) {
@@ -452,12 +452,12 @@
     <!-- //Smooth-Scrolling-JavaScript -->
 
     <!-- /js -->
-    <script src="{{ asset('js/bootstrap.js') }}"></script>
+    <script title="bootstrap.js" src="{{ asset('js/bootstrap.js') }}"></script>
 
 
 
 
-<script type="text/javascript" src="{{ asset('js/contact.js') }}"></script>
+<script title="contact.js" type="text/javascript" src="{{ asset('js/contact.js') }}"></script>
 
     <!-- //js -->
 
