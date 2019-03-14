@@ -21,3 +21,25 @@
 .portfolio-item2 a {
     cursor: pointer;
 }
+
+#about_us_div
+{
+    margin-top: 8%;
+    margin-bottom:8%;
+}
+
+#about_us
+{
+    color: #191919;
+    text-align: center;
+    float: left;
+
+}
+
+#about_us_desc
+{
+    text-align: center;
+    font-size: 13pt;
+    color: #787878;
+    font-family: 'Montserrat', sans-serif;
+}

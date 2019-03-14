@@ -24,6 +24,7 @@
     <!-- Meta tag Keywords -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
+    <meta name="google-site-verification" content="KSudqFZMmIsi7pi69zySEMhMMuNyETO2luQQ42Hblfo" />
     <meta name="keywords" content=" Inwardly
  Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
     Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
@@ -85,11 +86,15 @@
                             <span class="sr-only">(current)</span>
                         </a>
                             </li>
-                            <li class="nav-item cool">
+                            <li class="nav-item cool active">
                                 <a class="nav-link active" href="/about">About</a>
                             </li>
                             <li class="nav-item cool">
                                 <a class="nav-link" href="/services">Services</a>
+                            </li>
+
+                              <li class="nav-item cool">
+                                <a class="nav-link" href="/galleries">Galleries</a>
                             </li>
 {{--                             <li class="nav-item cool">
                                 <a class="nav-link" href="/gallery">Gallery</a>
@@ -107,7 +112,11 @@
                             </li> --}}
 
                             <li class="nav-item cool">
-                                <a class="nav-link" href="/contact">Contact</a>
+                                <a id="contact" class="nav-link" href="/contact">Contact</a>
+                            </li>
+
+                              <li class="nav-item cool">
+                                <a class="nav-link" href="/contact">Commercial/Industrial</a>
                             </li>
                                <!-- /search -->
                                 <li class="search">
@@ -347,23 +356,28 @@
     <!-- /dropdown nav -->
     <script>
         $(document).ready(function() {
-            $(".dropdown").hover(
-                function() {
-                    $('.dropdown-menu', this).stop(true, true).slideDown("fast");
-                    $(this).toggleClass('open');
-                },
-                function() {
-                    $('.dropdown-menu', this).stop(true, true).slideUp("fast");
-                    $(this).toggleClass('open');
-                }
-            );
+            // $(".dropdown").hover(
+            //     function() {
+            //         $('.dropdown-menu', this).stop(true, true).slideDown("fast");
+            //         $(this).toggleClass('open');
+            //     },
+            //     function() {
+            //         $('.dropdown-menu', this).stop(true, true).slideUp("fast");
+            //         $(this).toggleClass('open');
+            //     }
+            // );
 
                                   social();
- $('.navbar a').on('click', function () {
-     $('.navbar').find('li.active').removeClass('active');
-     $(this).parent('li').addClass('active');
- });
-
+   $(function () {
+                    var href = window.location.href;
+                    $('nav a').each(function ($this, i) {
+                        if (href.indexOf($(this).attr('href')) >= 0) {
+                            $(this).addClass('active');
+                        } else {
+                            $(this).removeClass('active');
+                        }
+                    });
+                });
         });
     </script>
     <!-- //dropdown nav -->

@@ -86,6 +86,10 @@
                             <li class="nav-item cool">
                                 <a class="nav-link" href="/services">Services</a>
                             </li>
+
+                               <li class="nav-item cool">
+                                <a class="nav-link" href="/galleries">Galleries</a>
+                            </li>
 {{--                             <li class="nav-item cool">
                                 <a class="nav-link" href="/gallery">Gallery</a>
                             </li> --}}
@@ -103,6 +107,10 @@
 
                             <li class="nav-item cool">
                                 <a class="nav-link" href="/contact">Contact</a>
+                            </li>
+
+                             <li class="nav-item cool">
+                                <a class="nav-link" href="/contact">Commercial/Industrial</a>
                             </li>
                             <!-- /search -->
                             <li class="search">
@@ -360,6 +368,22 @@
     </section> --}}
     <!---->
     <!--gallery  -->
+
+<section id="about_us_section" style="background-color: white" class="banner">
+<div class="container">
+    <div id="about_us_div"  class="row">
+        <div class="col-lg-6 col-lg-offset-5 col-md-12 col-sm-12">
+            <h1 id="about_us">About us </h1>
+        </div>
+        <div class="col-lg-8 col-lg-offset-2 col-md-12 col-sm-12">
+                                <p id="about_us_desc" >Divide have don't man wherein air fourth. Own itself make have night won't make. 
+A you under Seed appear which good give. Own give air without fowl moveth dry first 
+heaven fruit, dominion she'd won't very all</p>
+        </div>
+    </div>
+</div>
+
+</section>
     <section class="banner-bottom-w3ls bg-light py-md-5 py-4">
         <div class="container">
             <div class="inner-sec-wthreelayouts py-md-5 py-4">
@@ -731,16 +755,16 @@
     <!-- /dropdown nav -->
     <script>
         $(document).ready(function() {
-            $(".dropdown").hover(
-                function() {
-                    $('.dropdown-menu', this).stop(true, true).slideDown("fast");
-                    $(this).toggleClass('open');
-                },
-                function() {
-                    $('.dropdown-menu', this).stop(true, true).slideUp("fast");
-                    $(this).toggleClass('open');
-                }
-            );
+            // $(".dropdown").hover(
+            //     function() {
+            //         $('.dropdown-menu', this).stop(true, true).slideDown("fast");
+            //         $(this).toggleClass('open');
+            //     },
+            //     function() {
+            //         $('.dropdown-menu', this).stop(true, true).slideUp("fast");
+            //         $(this).toggleClass('open');
+            //     }
+            // );
         });
     </script>
     <!-- //dropdown nav -->
@@ -825,10 +849,10 @@
 var selector = '.nav li';
 
             social() ;
- $('.navbar a').on('click', function () {
-     $('.navbar').find('li.active').removeClass('active');
-     $(this).parent('li').addClass('active');
- });
+$('.navbar li a').on('click', function () {
+ $('.navbar').find('a.active').removeClass('active');
+ $(this).addClass('active');
+});
         });
     </script>
 
