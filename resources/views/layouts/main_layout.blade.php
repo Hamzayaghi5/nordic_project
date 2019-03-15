@@ -86,8 +86,8 @@
                             <span class="sr-only">(current)</span>
                         </a>
                             </li>
-                            <li class="nav-item cool active">
-                                <a class="nav-link active" href="/about">About</a>
+                            <li class="nav-item cool">
+                                <a class="nav-link" href="/about">About</a>
                             </li>
                             <li class="nav-item cool">
                                 <a class="nav-link" href="/services">Services</a>
@@ -116,7 +116,7 @@
                             </li>
 
                               <li class="nav-item cool">
-                                <a class="nav-link" href="/contact">Commercial/Industrial</a>
+                                <a class="nav-link" href="/contact1">Commercial/Industrial</a>
                             </li>
                                <!-- /search -->
                                 <li class="search">
@@ -368,17 +368,18 @@
             // );
 
                                   social();
-   $(function () {
+
                     var href = window.location.href;
                     $('nav a').each(function ($this, i) {
-                        if (href.indexOf($(this).attr('href')) >= 0) {
+                        console.log(href.indexOf($(this).attr('href')))
+                        if (href.indexOf($(this).attr('href')) >5) {
                             $(this).addClass('active');
                         } else {
                             $(this).removeClass('active');
                         }
                     });
                 });
-        });
+
     </script>
     <!-- //dropdown nav -->
     <!-- Banner Responsiveslides -->

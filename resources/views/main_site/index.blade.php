@@ -75,7 +75,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
     
                         <ul class="navbar-nav ml-lg-auto text-center">
-                            <li class="nav-item active cool">
+                            <li class="nav-item cool">
                                 <a class="nav-link" href="/">Home
 							<span class="sr-only">(current)</span>
 						</a>
@@ -849,10 +849,15 @@ heaven fruit, dominion she'd won't very all</p>
 var selector = '.nav li';
 
             social() ;
-$('.navbar li a').on('click', function () {
- $('.navbar').find('a.active').removeClass('active');
- $(this).addClass('active');
-});
+               var href = window.location.href;
+                    $('nav a').each(function ($this, i) {
+                        console.log(href.indexOf($(this).attr('href')))
+                        if (href.indexOf($(this).attr('href')) > -1) {
+                            $(this).addClass('active');
+                        } else {
+                            $(this).removeClass('active');
+                        }
+                    });
         });
     </script>
 
