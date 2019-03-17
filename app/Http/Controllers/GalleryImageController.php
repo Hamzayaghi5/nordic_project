@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\ProductImage;
+use App\GalleryImage;
 use Illuminate\Http\Request;
 
-class ProductImageController extends Controller
+class GalleryImageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class ProductImageController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\ProductImage  $productImage
+     * @param  \App\GalleryImage  $galleryImage
      * @return \Illuminate\Http\Response
      */
-    public function show(ProductImage $productImage)
+    public function show(GalleryImage $galleryImage)
     {
         //
     }
@@ -52,10 +52,10 @@ class ProductImageController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\ProductImage  $productImage
+     * @param  \App\GalleryImage  $galleryImage
      * @return \Illuminate\Http\Response
      */
-    public function edit(ProductImage $productImage)
+    public function edit(GalleryImage $galleryImage)
     {
         //
     }
@@ -64,10 +64,10 @@ class ProductImageController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\ProductImage  $productImage
+     * @param  \App\GalleryImage  $galleryImage
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ProductImage $productImage)
+    public function update(Request $request, GalleryImage $galleryImage)
     {
         //
     }
@@ -75,10 +75,10 @@ class ProductImageController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\ProductImage  $productImage
+     * @param  \App\GalleryImage  $galleryImage
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ProductImage $productImage)
+    public function destroy(GalleryImage $galleryImage)
     {
         //
     }
