@@ -147,15 +147,15 @@ Route::get('admin/galleries/delete/{id}', 'GalleryController@delete');
 
 //*****************************************************************************************************************************************
 
-Route::get('admin/gallery_images/index/{gallery_id}', 'GalleryController@index');
+Route::get('admin/gallery_images/index/{gallery_id}', 'GalleryImageController@index');
 
-Route::get('admin/gallery_images/create/{gallery_id}', 'GalleryController@create');
+Route::get('admin/gallery_images/create/{gallery_id}', 'GalleryImageController@create');
 
-Route::post('admin/gallery_images/create/{gallery_id}', 'GalleryController@store');
+Route::post('admin/gallery_images/create/{gallery_id}', 'GalleryImageController@store');
 
-Route::get('admin/gallery_images/update/{id}', 'GalleryController@edit');
+Route::get('admin/gallery_images/update/{id}', 'GalleryImageController@edit');
 
-Route::post('admin/gallery_images/update/{id}', 'GalleryController@update');
+Route::post('admin/gallery_images/update/{id}', 'GalleryImageController@update');
 
-Route::get('admin/gallery_images/delete/{id}', 'GalleryController@delete');
+Route::get('admin/gallery_images/delete/{id}', 'GalleryImageController@delete');
 });

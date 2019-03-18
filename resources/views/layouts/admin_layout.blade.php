@@ -138,6 +138,14 @@
       </li>
 
 
+                 <li class="nav-item">
+        <a class="nav-link" href="/admin/galleries/index">
+          <i class="fas fa-fw fa-file-image-o"></i>
+          <span>Galleries</span></a>
+      </li>
+
+
+
     </ul>
 
      <div id="content-wrapper">

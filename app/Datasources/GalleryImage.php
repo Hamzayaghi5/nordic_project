@@ -19,7 +19,7 @@ class GalleryImage extends Model
 
      public static function get_by_gallery($gallery_id)
     {
-    	$gallery_images=GalleryImage::where('gallery_id',$gallery_id)->get();
+    	$gallery_images=GalleryImage::where('gallery_id',$gallery_id)->with('gallery')->get();
     	return $gallery_images;
     }
 

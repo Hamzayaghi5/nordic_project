@@ -28,26 +28,20 @@
                 <thead>
                   <tr>
                     <th>#</th>
-                    <th>title</th>
-                    <th>description</th>
+                    <th>gallery</th>>
                     <th>image</th>
-                    <th>Gallery</th>
-                    <th>created_at</th>
                     <th>Operations</th>
 
                   </tr>
                 </thead>
                 <tbody>
-                  @foreach($products as $product)
+                  @foreach($galleryimages as $gallery_image)
                   <tr>
-                    <td>{{$product->id }}</td>
-                    <td>{{$product->title }}</td>
-                    <td>{{$product->description }}</td>
-                       <td><img class="img-responsive col-md" src="{{env('image_storage') }}/{{$product->images[0]->image}}"></td>
-                    <td>{{$product->category->name }}</td>
-                    <td>{{$product->created_at }}</td>
+                    <td>{{$gallery_image->id}}</td>
+                    <td>{{$gallery_image->title }}</td>
+                       <td><img class="img-responsive col-md-4" src="{{env('image_storage') }}/{{$gallery_image->image}}"></td>
                     <td style="width: 17%;"><div class="container">
-                      <div  class="row"><a style="margin-left:1%" href="/admin/products/update/{{$product->id}}"><button class="btn btn-primary" aria-hidden="true">Edit</button></a><a  style="margin-left:1%;color:rgba(204, 0, 0, 1);" onclick="return confirm('Are you sure you want to delete this product')" href="/admin/products/delete/{{$product->id}}"><button class="btn btn-danger" aria-hidden="true">Delete</button></a></div>
+                      <div  class="row"><a style="margin-left:1%" href="/admin/gallery_images/update/{{$gallery_image->id}}"><button class="btn btn-primary" aria-hidden="true">Edit</button></a><a  style="margin-left:1%;color:rgba(204, 0, 0, 1);" onclick="return confirm('Are you sure you want to delete this product')" href="/admin/gallery_images/delete/{{$gallery_image->id}}"><button class="btn btn-danger" aria-hidden="true">Delete</button></a></div>
                       </div>
                     <div>
                     </td>

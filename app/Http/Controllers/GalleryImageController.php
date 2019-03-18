@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\GalleryImage;
+use App\Gallery;
 use Illuminate\Http\Request;
 
 class GalleryImageController extends Controller
@@ -12,9 +13,11 @@ class GalleryImageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $gallery_id=$request['gallery_id'];
+        $galleryimages=GalleryImage::get_by_gallery($gallery_id);
+        return view('admin.gallery_image.index',compact('galleryimages'));
     }
 
     /**

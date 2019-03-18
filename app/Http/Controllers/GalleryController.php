@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Gallery;
+use App\GalleryImage;
 use Illuminate\Http\Request;
 
 class GalleryController extends Controller
@@ -14,8 +15,8 @@ class GalleryController extends Controller
      */
   public function index()
     {
-        $products=Product::get_all();
-        return view('admin.product.index',compact('products'));
+        $galleries=Gallery::get_all();
+        return view('admin.galleries.index',compact('galleries'));
     }
 
     /**
@@ -25,8 +26,7 @@ class GalleryController extends Controller
      */
     public function create()
     {
-        $categories=category::get_all();
-        return view('admin.product.create',compact('categories'));
+        return view('admin.galleries.create');
     }
 
     /**
@@ -75,11 +75,10 @@ class GalleryController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function edit($id,Product $product)
+    public function edit($id)
     {
-        $categories=Category::get_all();
-        $product=Product::get($id);
-        return view('admin.gallery.update',compact('product','categories'));
+        $gallery=Gallery::get($id);
+        return view('admin.gallery.update',compact('gallery'));
     }
 
     /**
@@ -91,28 +90,9 @@ class GalleryController extends Controller
      */
     public function update(Request $request)
     {   
-        $data=$request->all();
         $title=$request['title'];
         $gallery=Gallery::gallery_update($id,$title);
-                    if($request->hasFile('image')){
-            foreach ($request->file('image') as $file) {                 
-            $imagename=$file->getClientOriginalName();
-            $path_img=$file->storeAs('public/',$imagename);
-             $img_name=str_replace('public/', '', $path_img);
-             GalleryImage::gallery_image_update($gallery->id,$img_name);
-            
-             }
-             return redirect('/admin/products/index');
-        }
-    else
-    {
-        $gallery=Gallery::get($id);
-        $gallery=Gallery::gallery_update($id,$title);
-    }
-
-       
-         return redirect('/admin/products/index');
-
+         return redirect('/admin/galleries/index');
     }
 
     /**
