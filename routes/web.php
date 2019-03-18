@@ -129,4 +129,33 @@ Route::get('admin/contact/update/{id}', 'ContactController@edit');
 
 Route::post('admin/contact/update/{id}', 'ContactController@update');
 
+
+//*****************************************************************************************************************************************
+
+Route::get('admin/galleries/index', 'GalleryController@index');
+
+Route::get('admin/galleries/create', 'GalleryController@create');
+
+Route::post('admin/galleries/create', 'GalleryController@store');
+
+Route::get('admin/galleries/update/{id}', 'GalleryController@edit');
+
+Route::post('admin/galleries/update/{id}', 'GalleryController@update');
+
+Route::get('admin/galleries/delete/{id}', 'GalleryController@delete');
+
+
+//*****************************************************************************************************************************************
+
+Route::get('admin/gallery_images/index/{gallery_id}', 'GalleryController@index');
+
+Route::get('admin/gallery_images/create/{gallery_id}', 'GalleryController@create');
+
+Route::post('admin/gallery_images/create/{gallery_id}', 'GalleryController@store');
+
+Route::get('admin/gallery_images/update/{id}', 'GalleryController@edit');
+
+Route::post('admin/gallery_images/update/{id}', 'GalleryController@update');
+
+Route::get('admin/gallery_images/delete/{id}', 'GalleryController@delete');
 });

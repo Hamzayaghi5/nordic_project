@@ -79,7 +79,7 @@ class GalleryController extends Controller
     {
         $categories=Category::get_all();
         $product=Product::get($id);
-        return view('admin.product.update',compact('product','categories'));
+        return view('admin.gallery.update',compact('product','categories'));
     }
 
     /**
