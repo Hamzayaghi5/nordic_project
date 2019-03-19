@@ -24,6 +24,12 @@ class Gallery extends Model
     	return $galleries;
     }
 
+        public static function get($id)
+    {
+        $gallery=Gallery::find($id);
+        return $gallery;
+    }
+
 
        public static function gallery_insert($title)
     {

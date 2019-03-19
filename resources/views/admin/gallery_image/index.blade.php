@@ -3,7 +3,7 @@
     @section('content')
     <div id="content-wrapper">
 
-      <a style="margin:1%" href="/admin/products/create/{{$galleryimages[0]->gallery->id}}" class="btn btn-success"><i style="color: white" class="fa fa-plus" aria-hidden="true"></i> Add New Product</a>
+      <a style="margin:1%" href="/admin/gallery_images/create/{{$galleryimages[0]->gallery->id}}" class="btn btn-success"><i style="color: white" class="fa fa-plus" aria-hidden="true"></i> Add image to gallery</a>
 
      
 
@@ -38,7 +38,7 @@
                   @foreach($galleryimages as $gallery_image)
                   <tr>
                     <td>{{$gallery_image->id}}</td>
-                    <td>{{$gallery_image->title }}</td>
+                    <td>{{$gallery_image->gallery->title }}</td>
                        <td><img class="img-responsive col-md-4" src="{{env('image_storage') }}/{{$gallery_image->image}}"></td>
                     <td style="width: 17%;"><div class="container">
                       <div  class="row"><a style="margin-left:1%" href="/admin/gallery_images/update/{{$gallery_image->id}}"><button class="btn btn-primary" aria-hidden="true">Edit</button></a><a  style="margin-left:1%;color:rgba(204, 0, 0, 1);" onclick="return confirm('Are you sure you want to delete this product')" href="/admin/gallery_images/delete/{{$gallery_image->id}}"><button class="btn btn-danger" aria-hidden="true">Delete</button></a></div>

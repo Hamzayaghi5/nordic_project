@@ -25,9 +25,11 @@ class GalleryImageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $id=$request['gallery_id'];
+        $gallery=Gallery::get($id);
+        return view('admin.gallery_image.create',compact('gallery'));
     }
 
     /**
@@ -38,9 +40,9 @@ class GalleryImageController extends Controller
      */
     public function store(Request $request)
     {   
-        $id=$request['id'];
-        $gallery_id=$request['gallery_id'];
+    
              $data=$request->all();
+        $gallery_id=$request['gallery_id'];
              if($request->file('image')!= null){
 
             $path;
@@ -52,9 +54,7 @@ class GalleryImageController extends Controller
                 }
 
             }
-
-
-         GalleryImage::gallery_image_insert($id,$gallery_id,$img_name);
+         GalleryImage::gallery_image_insert($gallery_id,$img_name);
          return redirect('/admin/gallery_images/index/'.$gallery_id);
     }
       return Redirect::back()->withErrors('The image input must not be empty');
@@ -118,7 +118,7 @@ class GalleryImageController extends Controller
          GalleryImage::gallery_image_update($id,$gallery_id,$gallery_image->image);;
     }
 
-         return redirect('/admin/categories/index');
+         return redirect('/admin/gallery_images/index/'.$gallery_id);
     }
 
     /**
