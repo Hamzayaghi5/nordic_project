@@ -25,6 +25,9 @@ Route::get('/contact', 'SiteController@contact')->name('contact');
 Route::get('/services', 'SiteController@services')->name('services');
 
 
+Route::get('/galleries', 'SiteController@gallery')->name('gallery');
+
+
 
 
 Route::post('contact-us', ['as'=>'contactus.store','uses'=>'ContactUsController@contactSaveData']);

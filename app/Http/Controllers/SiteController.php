@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Category;
 use App\Product;
+use App\Gallery;
+use App\GalleryImage;
 use App\Slider;
 use App\Testimonial;
 
@@ -59,9 +61,8 @@ class SiteController extends Controller
 
     public function gallery(Request $request)
     {
-        $category_id=$request['category_id'];
-        $products=Product::get_by_category($category_id);
-        return view('main_site.gallery',compact('products'));
+        $gallery=Gallery::get(4);
+       return view('main_site.gallery',compact('gallery'));
     }
 
     /**

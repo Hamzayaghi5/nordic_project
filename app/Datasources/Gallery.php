@@ -26,7 +26,7 @@ class Gallery extends Model
 
         public static function get($id)
     {
-        $gallery=Gallery::find($id);
+        $gallery=Gallery::where('id',$id)->with('images')->first();
         return $gallery;
     }
 

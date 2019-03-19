@@ -9,8 +9,11 @@
 
 <head>
 
+        <script src="{{ asset('js/jquery-2.2.3.min.js') }}"></script>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
+
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135194491-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -351,7 +354,7 @@
 
     <!--//model-form-->
     <!-- js -->
-    <script src="{{ asset('js/jquery-2.2.3.min.js') }}"></script>
+
     <script src="{{ asset('js/search.js') }}"></script>
     <!-- /dropdown nav -->
     <script>
@@ -476,7 +479,14 @@
 
     <!-- //js -->
 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js.map"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js.map"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
 
 </body>
 
