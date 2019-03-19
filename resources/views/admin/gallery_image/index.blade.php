@@ -3,7 +3,7 @@
     @section('content')
     <div id="content-wrapper">
 
-      <a style="margin:1%" href="/admin/products/create" class="btn btn-success"><i style="color: white" class="fa fa-plus" aria-hidden="true"></i> Add New Product</a>
+      <a style="margin:1%" href="/admin/products/create/{{$galleryimages[0]->gallery->id}}" class="btn btn-success"><i style="color: white" class="fa fa-plus" aria-hidden="true"></i> Add New Product</a>
 
      
 
