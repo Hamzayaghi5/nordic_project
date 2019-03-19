@@ -24,6 +24,14 @@ class GalleryImage extends Model
     }
 
 
+       public static function get($id)
+    {
+        $gallery_images=GalleryImage::where('id',$id)->with('gallery')->first();
+        return $gallery_images;
+    }
+
+
+
        public static function gallery_image_insert($gallery_id,$image)
     {
     	$gallery_image = new GalleryImage;
@@ -35,7 +43,7 @@ class GalleryImage extends Model
 
 
 
-       public static function gallery_image_update($id,$title)
+       public static function gallery_image_update($id,$gallery_id,$image)
     {
     	$gallery_image =GalleryImage::find($id);
    		$gallery_image->gallery_id=$gallery_id;

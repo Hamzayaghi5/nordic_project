@@ -37,8 +37,27 @@ class GalleryImageController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //
+    {   
+        $id=$request['id'];
+        $gallery_id=$request['gallery_id'];
+             $data=$request->all();
+             if($request->file('image')!= null){
+
+            $path;
+            if(request()->file('image')->isValid()){
+                $path = $request->file('image')->storeAs('public', time().'.jpg');
+                $img_name=str_replace('public/', '', $path);
+                if(empty($path)){
+                    return response()->json([],400);
+                }
+
+            }
+
+
+         GalleryImage::gallery_image_insert($id,$gallery_id,$img_name);
+         return redirect('/admin/gallery_images/index/'.$gallery_id);
+    }
+      return Redirect::back()->withErrors('The image input must not be empty');
     }
 
     /**
@@ -58,9 +77,11 @@ class GalleryImageController extends Controller
      * @param  \App\GalleryImage  $galleryImage
      * @return \Illuminate\Http\Response
      */
-    public function edit(GalleryImage $galleryImage)
+    public function edit(Request $request)
     {
-        //
+        $id=$request['id'];
+      $gallery_image=GalleryImage::get($id);
+      return view('admin.gallery_image.update',compact('gallery_image'));
     }
 
     /**
@@ -70,9 +91,34 @@ class GalleryImageController extends Controller
      * @param  \App\GalleryImage  $galleryImage
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, GalleryImage $galleryImage)
+    public function update(Request $request)
+    {   
+        $id=$request['id'];
+        $gallery_id=$request['gallery_id'];
+             $data=$request->all();
+             if($request->file('image')!= null){
+
+            $path;
+            if(request()->file('image')->isValid()){
+                $path = $request->file('image')->storeAs('public', time().'.jpg');
+                $img_name=str_replace('public/', '', $path);
+                if(empty($path)){
+                    return response()->json([],400);
+                }
+
+            }
+
+
+         GalleryImage::gallery_image_update($id,$gallery_id,$img_name);
+    }
+    else
     {
-        //
+        $gallery_image=GalleryImage::get($id);
+
+         GalleryImage::gallery_image_update($id,$gallery_id,$gallery_image->image);;
+    }
+
+         return redirect('/admin/categories/index');
     }
 
     /**

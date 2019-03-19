@@ -1,5 +1,12 @@
 @extends('layouts.admin_layout')
 @section('content')
+
+@if($errors->any())
+<div class="alert alert-danger col-lg-6">
+  {{$errors->first()}}
+</div>           
+@endif
+
 	<div class="col-6">
 <form  class="container" action='/admin/products/update/{{$product->id}}' method="POST" enctype="multipart/form-data">
 	@csrf
