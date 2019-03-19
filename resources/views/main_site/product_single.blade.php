@@ -51,7 +51,7 @@
                                         {{-- expr --}}
                               
                                     <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        <a href="/gallery/{{$category->id}}">{{$category->name}}</a>
+                                        <a href="/products/{{$category->id}}">{{$category->name}}</a>
                                         <span class="badge badge-primary badge-pill">{{$category->count()}}</span>
                                     </li>
                                     @endforeach

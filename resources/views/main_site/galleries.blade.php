@@ -5,7 +5,7 @@
         <div class="container">
             <div class="inner-sec-wthreelayouts py-md-5 py-4">
                 <h2 class="tittle text-center mb-lg-5 mb-3">
-                    Featured Services</h2>
+                    Galleries</h2>
                 <!--/services-grids-->
                 <div class="service-mid-sec mt-lg-5 mt-4">
                       
@@ -14,16 +14,14 @@
                             {{-- expr --}}
                      
                         <div class="row middle-grids">
-                            @foreach ($categories as $category)
+                            @foreach ($galleries as $gallery)
                             
                             <div class="col-lg-4 about-in middle-grid-info text-center">
                                 <div class="card img">
-                                    <a href="/products/{{$category->id}}">
+                                    <a href="/gallery/{{$gallery->id}}">
                                     <div class="card-body img">
-                                        <img src="{{env('image_storage')}}/{{$category->image}}" alt="" class="img-fluid corner">
-                                        <h5 class="card-title">{{$category->name}}</h5>
-                                        <p class="card-text">{{$category->description}}
-                                        </p>
+                                        <img src="{{env('image_storage')}}/{{$gallery->images[0]->image}}" alt="" class="img-fluid corner">
+                                        <h5 class="card-title">{{$gallery->title}}</h5>
                                     </div>
                                      </a>
                                 </div>

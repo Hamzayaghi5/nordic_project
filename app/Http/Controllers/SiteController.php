@@ -49,20 +49,33 @@ class SiteController extends Controller
      return view('main_site.services',compact('categories'));
     }
 
+    public function products_by_category(Request $request)
+    {
+        $category_id=$request['category_id'];
+        $products=Product::get_by_category($category_id);
+        return view('main_site.products',compact('products'));
+    }
+
+
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
-    }
+
 
     public function gallery(Request $request)
     {
-        $gallery=Gallery::get(4);
+        $gallery_id=$request['gallery_id'];
+        $gallery=Gallery::get($gallery_id);
        return view('main_site.gallery',compact('gallery'));
+    }
+
+
+      public function galleries(Request $request)
+    {
+        $galleries=Gallery::get_all();
+       return view('main_site.galleries',compact('galleries'));
     }
 
     /**

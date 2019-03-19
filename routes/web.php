@@ -25,7 +25,7 @@ Route::get('/contact', 'SiteController@contact')->name('contact');
 Route::get('/services', 'SiteController@services')->name('services');
 
 
-Route::get('/galleries', 'SiteController@gallery')->name('gallery');
+Route::get('/galleries', 'SiteController@galleries')->name('gallery');
 
 
 
@@ -40,10 +40,11 @@ Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::post('/login', 'Auth\LoginController@login')->name('login');
 
+Route::get('/products/{category_id}', 'SiteController@products_by_category')->name('product');
 
 Route::get('/product single/{id}', 'ProductController@show')->name('product');
 
-Route::get('/gallery/{category_id}', 'SiteController@gallery')->name('gallery');
+Route::get('/gallery/{gallery_id}', 'SiteController@gallery')->name('gallery');
 //*****************************************************************************************************************************************
 //protected routes by the middleware
 Route::group(['middleware' => 'checkval'], function() {
