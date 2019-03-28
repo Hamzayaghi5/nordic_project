@@ -28,6 +28,9 @@ Route::get('/services', 'SiteController@services')->name('services');
 Route::get('/galleries', 'SiteController@galleries')->name('gallery');
 
 
+Route::get('/commercial', 'SiteController@commercial')->name('commercial');
+
+
 
 
 Route::post('contact-us', ['as'=>'contactus.store','uses'=>'ContactUsController@contactSaveData']);

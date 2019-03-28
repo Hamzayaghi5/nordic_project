@@ -110,7 +110,7 @@
                             </li>
 
                              <li class="nav-item cool">
-                                <a class="nav-link" href="/contact">Commercial/Industrial</a>
+                                <a class="nav-link" href="/commercial">Commercial/Industrial</a>
                             </li>
                             <!-- /search -->
                             <li class="search">
