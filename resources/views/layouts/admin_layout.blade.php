@@ -114,9 +114,9 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="/admin/products/index">
+        <a class="nav-link" href="/admin/services/index">
           <i class="fas fa-fw fa-cart-plus"></i>
-          <span>Products</span></a>
+          <span>Services</span></a>
       </li>
 
           <li class="nav-item">

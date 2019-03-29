@@ -6,7 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'App\\Category' => $baseDir . '/app/Datasources/Category.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Contact' => $baseDir . '/app/Datasources/Contact.php',
     'App\\ContactUs' => $baseDir . '/app/ContactUs.php',
@@ -26,7 +25,7 @@ return array(
     'App\\Http\\Controllers\\GalleryController' => $baseDir . '/app/Http/Controllers/GalleryController.php',
     'App\\Http\\Controllers\\GalleryImageController' => $baseDir . '/app/Http/Controllers/GalleryImageController.php',
     'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
-    'App\\Http\\Controllers\\ProductController' => $baseDir . '/app/Http/Controllers/Product/ProductController.php',
+    'App\\Http\\Controllers\\ServiceController' => $baseDir . '/app/Http/Controllers/Product/ServiceController.php',
     'App\\Http\\Controllers\\SiteController' => $baseDir . '/app/Http/Controllers/SiteController.php',
     'App\\Http\\Controllers\\SliderController' => $baseDir . '/app/Http/Controllers/Slider/SliderController.php',
     'App\\Http\\Controllers\\TestimonialController' => $baseDir . '/app/Http/Controllers/Testimonial/TestimonialController.php',
@@ -41,13 +40,13 @@ return array(
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
     'App\\Mail\\contactus' => $baseDir . '/app/Mail/contactus.php',
-    'App\\Product' => $baseDir . '/app/Datasources/Product.php',
-    'App\\ProductImage' => $baseDir . '/app/Datasources/ProductImage.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',
     'App\\Providers\\EventServiceProvider' => $baseDir . '/app/Providers/EventServiceProvider.php',
     'App\\Providers\\RouteServiceProvider' => $baseDir . '/app/Providers/RouteServiceProvider.php',
+    'App\\Service' => $baseDir . '/app/Datasources/Service.php',
+    'App\\ServiceImage' => $baseDir . '/app/Datasources/ServiceImage.php',
     'App\\Slider' => $baseDir . '/app/Datasources/Slider.php',
     'App\\Testimonial' => $baseDir . '/app/Datasources/Testimonial.php',
     'App\\User' => $baseDir . '/app/Datasources/User.php',

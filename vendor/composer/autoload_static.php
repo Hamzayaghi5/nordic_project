@@ -479,7 +479,6 @@ class ComposerStaticInit26bb958bc64cafd51948b4eee7704ade
     );
 
     public static $classMap = array (
-        'App\\Category' => __DIR__ . '/../..' . '/app/Datasources/Category.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Contact' => __DIR__ . '/../..' . '/app/Datasources/Contact.php',
         'App\\ContactUs' => __DIR__ . '/../..' . '/app/ContactUs.php',
@@ -499,7 +498,7 @@ class ComposerStaticInit26bb958bc64cafd51948b4eee7704ade
         'App\\Http\\Controllers\\GalleryController' => __DIR__ . '/../..' . '/app/Http/Controllers/GalleryController.php',
         'App\\Http\\Controllers\\GalleryImageController' => __DIR__ . '/../..' . '/app/Http/Controllers/GalleryImageController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
-        'App\\Http\\Controllers\\ProductController' => __DIR__ . '/../..' . '/app/Http/Controllers/Product/ProductController.php',
+        'App\\Http\\Controllers\\ServiceController' => __DIR__ . '/../..' . '/app/Http/Controllers/Product/ServiceController.php',
         'App\\Http\\Controllers\\SiteController' => __DIR__ . '/../..' . '/app/Http/Controllers/SiteController.php',
         'App\\Http\\Controllers\\SliderController' => __DIR__ . '/../..' . '/app/Http/Controllers/Slider/SliderController.php',
         'App\\Http\\Controllers\\TestimonialController' => __DIR__ . '/../..' . '/app/Http/Controllers/Testimonial/TestimonialController.php',
@@ -514,13 +513,13 @@ class ComposerStaticInit26bb958bc64cafd51948b4eee7704ade
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Mail\\contactus' => __DIR__ . '/../..' . '/app/Mail/contactus.php',
-        'App\\Product' => __DIR__ . '/../..' . '/app/Datasources/Product.php',
-        'App\\ProductImage' => __DIR__ . '/../..' . '/app/Datasources/ProductImage.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'App\\Service' => __DIR__ . '/../..' . '/app/Datasources/Service.php',
+        'App\\ServiceImage' => __DIR__ . '/../..' . '/app/Datasources/ServiceImage.php',
         'App\\Slider' => __DIR__ . '/../..' . '/app/Datasources/Slider.php',
         'App\\Testimonial' => __DIR__ . '/../..' . '/app/Datasources/Testimonial.php',
         'App\\User' => __DIR__ . '/../..' . '/app/Datasources/User.php',

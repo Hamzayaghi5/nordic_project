@@ -14,15 +14,15 @@
                             {{-- expr --}}
                      
                         <div class="row middle-grids">
-                            @foreach ($categories as $category)
+                            @foreach ($services as $service)
                             
                             <div class="col-lg-4 about-in middle-grid-info text-center">
                                 <div class="card img">
-                                    <a href="/products/{{$category->id}}">
+                                    <a href="/products/{{$service->id}}">
                                     <div class="card-body img">
-                                        <img src="{{env('image_storage')}}/{{$category->image}}" alt="" class="img-fluid corner">
-                                        <h5 class="card-title">{{$category->name}}</h5>
-                                        <p class="card-text">{{$category->description}}
+                                        <img src="{{env('image_storage')}}/{{$service->images[0]->image}}" alt="" class="img-fluid corner">
+                                        <h5 class="card-title">{{$service->title}}</h5>
+                                        <p class="card-text">{{$service->main_description}}
                                         </p>
                                     </div>
                                      </a>

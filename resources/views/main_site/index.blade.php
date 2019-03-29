@@ -393,16 +393,16 @@ heaven fruit, dominion she'd won't very all</p>
                 <div class="service-mid-sec mt-lg-5 mt-4">
                     <div class="middle-serve-content">
                         <div class="row middle-grids">
-                          @foreach ($categories as $category)
+                          @foreach ($services as $service)
                               {{-- expr --}}
                      
                             <div class="col-lg-4 about-in middle-grid-info text-center">
                                 <div class="card img">
                                     <div class="card-body img">
                                         <a href="">
-                                        <img style="height:200px" src="{{env('image_storage')}}/{{$category->image}}" alt="" class="img-fluid corner">
+                                        <img style="height:200px" src="{{env('image_storage')}}/{{$service->images[0]->image}}" alt="" class="img-fluid corner">
                                         </a>
-                                        <h5 class="card-title">{{$category->name}}</h5>
+                                        <h5 class="card-title">{{$service->title}}</h5>
                                {{--          <p class="card-text">{{$category->description}}
                                         </p> --}}
                                     </div>

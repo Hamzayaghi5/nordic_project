@@ -45,7 +45,7 @@ Route::post('/login', 'Auth\LoginController@login')->name('login');
 
 Route::get('/products/{category_id}', 'SiteController@products_by_category')->name('product');
 
-Route::get('/product single/{id}', 'ProductController@show')->name('product');
+Route::get('/product single/{id}', 'ServiceController@show')->name('product');
 
 Route::get('/gallery/{gallery_id}', 'SiteController@gallery')->name('gallery');
 //*****************************************************************************************************************************************
@@ -87,17 +87,17 @@ Route::post('admin/categories/update/{id}', 'CategoryController@update');
 Route::get('admin/categories/delete/{id}', 'CategoryController@delete');
 //*****************************************************************************************************************************************
 
-Route::get('admin/products/index', 'ProductController@index');
+Route::get('admin/services/index', 'ServiceController@index');
 
-Route::get('admin/products/create', 'ProductController@create');
+Route::get('admin/services/create', 'ServiceController@create');
 
-Route::post('admin/products/create', 'ProductController@store');
+Route::post('admin/services/create', 'ServiceController@store');
 
-Route::get('admin/products/update/{id}', 'ProductController@edit');
+Route::get('admin/services/update/{id}', 'ServiceController@edit');
 
-Route::post('admin/products/update/{id}', 'ProductController@update');
+Route::post('admin/services/update/{id}', 'ServiceController@update');
 
-Route::get('admin/products/delete/{id}', 'ProductController@delete');
+Route::get('admin/services/delete/{id}', 'ServiceController@delete');
 
 //*****************************************************************************************************************************************
 

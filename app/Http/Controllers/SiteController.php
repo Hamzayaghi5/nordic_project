@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Category;
-use App\Product;
+use App\Service;
 use App\Gallery;
 use App\GalleryImage;
 use App\Slider;
@@ -20,9 +19,9 @@ class SiteController extends Controller
     public function index()
     {
         $sliders=Slider::get_all();
-        $categories=Category::get_all();
+        $services=Service::get_all();
         $testimonials=Testimonial::get_all();
-        return view('main_site.index',compact('sliders','testimonials','categories'));
+        return view('main_site.index',compact('sliders','testimonials','services'));
     }
 
 
@@ -45,8 +44,8 @@ class SiteController extends Controller
 
     public function services()
     {
-        $categories=Category::get_all();
-     return view('main_site.services',compact('categories'));
+        $services=Service::get_all();
+     return view('main_site.services',compact('services'));
     }
 
     public function products_by_category(Request $request)
