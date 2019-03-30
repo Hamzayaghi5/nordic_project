@@ -3,7 +3,7 @@
     @section('content')
     <div id="content-wrapper">
 
-      <a style="margin:1%" href="/admin/products/create" class="btn btn-success"><i style="color: white" class="fa fa-plus" aria-hidden="true"></i> Add New Product</a>
+      <a style="margin:1%" href="/admin/services/create" class="btn btn-success"><i style="color: white" class="fa fa-plus" aria-hidden="true"></i> Add New service</a>
 
      
 
@@ -29,25 +29,25 @@
                   <tr>
                     <th>#</th>
                     <th>title</th>
-                    <th>description</th>
+                    <th>main_description</th>
+                    <th>sub_description</th>
                     <th>image</th>
-                    <th>Category</th>
                     <th>created_at</th>
                     <th>Operations</th>
 
                   </tr>
                 </thead>
                 <tbody>
-                  @foreach($products as $product)
+                  @foreach($services as $service)
                   <tr>
-                    <td>{{$product->id }}</td>
-                    <td>{{$product->title }}</td>
-                    <td>{{$product->description }}</td>
-                       <td><img class="img-responsive col-md" src="{{env('image_storage') }}/{{$product->images[0]->image}}"></td>
-                    <td>{{$product->category->name }}</td>
-                    <td>{{$product->created_at }}</td>
+                    <td>{{$service->id }}</td>
+                    <td>{{$service->title }}</td>
+                    <td>{{$service->main_description }}</td>
+                    <td>{{$service->sub_description }}</td>
+                       <td><img class="img-responsive col-md" src="{{env('image_storage') }}/{{$service->images[0]->image}}"></td>
+                    <td>{{$service->created_at }}</td>
                     <td style="width: 17%;"><div class="container">
-                      <div  class="row"><a style="margin-left:1%" href="/admin/products/update/{{$product->id}}"><button class="btn btn-primary" aria-hidden="true">Edit</button></a><a  style="margin-left:1%;color:rgba(204, 0, 0, 1);" onclick="return confirm('Are you sure you want to delete this product')" href="/admin/products/delete/{{$product->id}}"><button class="btn btn-danger" aria-hidden="true">Delete</button></a></div>
+                      <div  class="row"><a style="margin-left:1%" href="/admin/services/update/{{$service->id}}"><button class="btn btn-primary" aria-hidden="true">Edit</button></a><a  style="margin-left:1%;color:rgba(204, 0, 0, 1);" onclick="return confirm('Are you sure you want to delete this service')" href="/admin/services/delete/{{$service->id}}"><button class="btn btn-danger" aria-hidden="true">Delete</button></a></div>
                       </div>
                     <div>
                     </td>

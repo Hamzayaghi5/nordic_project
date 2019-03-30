@@ -33,8 +33,7 @@ class ServiceController extends Controller
      */
     public function create()
     {
-        $categories=category::get_all();
-        return view('admin.service.create',compact('categories'));
+        return view('admin.service.create');
     }
 
     /**
@@ -46,10 +45,10 @@ class ServiceController extends Controller
   public function store(Request $request)
     {   
              $data=$request->all();
-                    $category_id=$data['category_id'];
-        $title=$data['title'];
-        $description=$data['description'];
-        $service=Service::service_insert($category_id,$title,$description);
+             $title=$data['title'];
+             $main_description=$data['main_description'];
+        $sub_description=$data['sub_description'];
+        $service=Service::service_insert($title,$main_description,$sub_description);
 
                     if($request->hasFile('img_name')){
             foreach ($request->file('img_name') as $file) {                    
@@ -86,9 +85,8 @@ class ServiceController extends Controller
      */
     public function edit($id,service $service)
     {
-        $categories=Category::get_all();
         $service=Service::get($id);
-        return view('admin.service.update',compact('service','categories'));
+        return view('admin.service.update',compact('service'));
     }
 
     /**
@@ -101,11 +99,10 @@ class ServiceController extends Controller
     public function update(Request $request)
     {   
              $data=$request->all();
-             $id=$request['id'];
-        $category_id=$request['category_id'];
-        $title=$request['title'];
-        $description=$request['description'];
-        $service=Service::service_update($id,$category_id,$title,$description);
+             $title=$data['title'];
+             $main_description=$data['main_description'];
+        $sub_description=$data['sub_description'];
+        $service=Service::service_update($id,$title,$main_description,$sub_description);
                     if($request->hasFile('img_name')){
             foreach ($request->file('img_name') as $file) {                 
             $imagename=$file->getClientOriginalName();
@@ -119,7 +116,7 @@ class ServiceController extends Controller
     else
     {
         $service=Service::get($id);
-        Service::service_update($id,$category_id,$title,$description);
+        Service::service_update($id,$title,$main_description,$sub_description);
     }
 
        

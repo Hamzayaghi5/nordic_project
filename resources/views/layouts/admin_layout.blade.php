@@ -107,12 +107,6 @@
       </li>
 
 
-       <li class="nav-item">
-        <a class="nav-link" href="/admin/categories/index">
-          <i class="fas fa-fw fa-list-alt"></i>
-          <span>Categories</span></a>
-      </li>
-
       <li class="nav-item">
         <a class="nav-link" href="/admin/services/index">
           <i class="fas fa-fw fa-cart-plus"></i>

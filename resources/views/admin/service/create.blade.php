@@ -9,30 +9,29 @@
 @endif
 
 	<div class="col-6">
-<form  class="container" action='/admin/products/create' method="POST" enctype="multipart/form-data">
+<form  class="container" action='/admin/services/create' method="POST" enctype="multipart/form-data">
 	@csrf
 
 			<div class="form-group">
-		<label for="exampleInputEmail1">Product Title</label>
+		<label for="exampleInputEmail1">Service name</label>
 		<input name="title" class="form-control"  id="comment" required>
 		
 	</div>
 
 				<div class="form-group">
-		<label for="exampleInputEmail1">Product Description</label>
-		<textarea name="description" class="form-control" rows="5" id="comment" required></textarea>
+		<label for="exampleInputEmail1">Product Main Description</label>
+		<textarea name="main_description" class="form-control" rows="5" id="comment" required></textarea>
 		
 	</div>
 
 
-	<div class="form-group">
-  <label for="sel1">Select list:</label>
-  <select class="form-control" id="sel1" name="category_id">
-  	@foreach($categories as $category)
-  	  <option value="{{$category->id}}">{{$category->name}}</option>
-  	@endforeach
-  </select>
-</div>
+					<div class="form-group">
+		<label for="exampleInputEmail1">Product Sub Description</label>
+		<textarea name="sub_description" class="form-control" rows="5" id="comment" required></textarea>
+		
+	</div>
+
+
 	<label for="exampleInputEmail1">Image</label>
 	<input class="active" type="file" name="img_name[]" enctype="multipart/form-data" required multiple>
 	<br><br>
