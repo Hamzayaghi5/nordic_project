@@ -541,33 +541,11 @@ heaven fruit, dominion she'd won't very all</p>
     </section> --}}
     <!-- //bottom-last -->
 
-                <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-6 map">
-                      <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=london&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-
-                    </div>
-                    <div class="col-md-6 main_grid_contact">
-                        
-                            <h4 class="mb-4 text-left">Send us a message</h4>
-
-                                <div class="form-group">
-                                    <label class="my-2">Name</label>
-                                    <p class="my-2">Hello</p>
-                                </div>
-                                <div class="form-group">
-                                    <label>Email</label>
-                                    <p class="my-2">Hello</p>
-                                </div>
-                                <div class="form-group">
-                                    <label>Message</label>
-                                   <p class="my-2">Hello</p>
-                                </div>
-
-                        
+                    <div class="col-md-12">
+                        <iframe width="1700" height="600" id="gmap_canvas" src="https://maps.google.com/maps?q=41%20Ferndale%20Skelmersdale%20WN8%206QY%20England&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                     </div>
                 </div>
-            </div>
 
     <!--/footer-->
      <footer class="footer-main-w3layouts py-md-5 py-4">
