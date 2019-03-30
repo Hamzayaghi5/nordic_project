@@ -20,6 +20,12 @@ class ServiceController extends Controller
         return view('admin.service.index',compact('services'));
     }
 
+        public function index_api()
+    {
+        $services=Service::get_all();
+        return compact('services');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

@@ -83,8 +83,16 @@
                             <li class="nav-item cool">
                                 <a class="nav-link" href="/about">About</a>
                             </li>
-                            <li class="nav-item cool">
-                                <a class="nav-link" href="/services">Services</a>
+                            <li class="nav-item dropdown cool">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Services
+                        </a>
+                                <div id="sub_services" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="blog.html">Blog Page</a>
+                                    <a class="dropdown-item" href="single.html">Single page</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="404.html">404</a>
+                                </div>
                             </li>
 
                                <li class="nav-item cool">
@@ -848,7 +856,8 @@ heaven fruit, dominion she'd won't very all</p>
 
 var selector = '.nav li';
 
-            social() ;
+            social();
+            services();
                var href = window.location.href;
                     $('nav a').each(function ($this, i) {
                         console.log(href.indexOf($(this).attr('href')))
@@ -875,6 +884,7 @@ var selector = '.nav li';
     </script>
 
 <script type="text/javascript" src="{{ asset('js/contact.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/services.js') }}"></script>
     <!-- //js -->
 </body>
 

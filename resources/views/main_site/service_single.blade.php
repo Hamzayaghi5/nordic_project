@@ -42,23 +42,6 @@
                     </div>
                     <!--//left-->
                     <!--right-->
-                    <aside class="col-lg-4 right-blog-con text-left">
-                        <div class="right-blog-info text-left">
-                            <div class="tech-btm">
-                                <h4>Categories</h4>
-                                <ul class="list-group single">
-                                    @foreach ($categories as $category)
-                                        {{-- expr --}}
-                              
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        <a href="/services/{{$category->id}}">{{$category->name}}</a>
-                                        <span class="badge badge-primary badge-pill">{{$category->count()}}</span>
-                                    </li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        </div>
-                    </aside>
                     <!--//right-->
 
                 </div>
