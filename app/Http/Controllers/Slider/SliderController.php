@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Slider;
 use Illuminate\Http\Request;
 use Redirect;
+use Illuminate\Support\Facades\Storage;
 class SliderController extends Controller
 {
     /**
@@ -134,6 +135,8 @@ class SliderController extends Controller
     public function delete(Request $request)
     {
         $id=$request['id'];
+        $slider=Slider::get($id);
+        Storage::delete('public/'.$slider->img_url);
         Slider::slider_delete($id);
          return redirect('/admin/sliders/index');
     }
